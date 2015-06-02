@@ -11,10 +11,13 @@
     <string name="action_refresh">Обновить</string>
     <string name="arrival_tab">Прибытие</string>
     <string name="departure_tab">Вылет</string>
-    <string name="scheduled_label">По расписанию:</string>
-    <string name="estimated_label">Ожидаемое:</string>
+    <string name="scheduled_label">По расписанию</string>
+    <string name="estimated_label">Ожидаемое</string>
+    <string name="status_label">Статус</string>
+    <string name="airline_label">Авиалиния</string>
 
     <string name="title_activity_arrival">Прибытие</string>
+    <string name="title_activity_departure">Вылет</string>
 
     <string name="LANDED">Прибыл</string>
     <string name="CHECKIN">Регистрация</string>

@@ -11,12 +11,13 @@
     <string name="action_refresh">Refresh</string>
     <string name="arrival_tab">Arrival</string>
     <string name="departure_tab">Departure</string>
-    <string name="scheduled_label">Scheduled:</string>
-    <string name="estimated_label">Estimated:</string>
+    <string name="scheduled_label">Scheduled</string>
+    <string name="estimated_label">Estimated</string>
+    <string name="status_label">Status</string>
+    <string name="airline_label">Airline</string>
 
     <string name="title_activity_arrival">Arrival</string>
-
-    <string name="airline_title">Airline</string>
+    <string name="title_activity_departure">Departure</string>
 
     <string name="LANDED">Landed</string>
     <string name="CHECKIN">Check-in</string>

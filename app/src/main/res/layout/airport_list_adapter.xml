@@ -39,7 +39,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/time_expected_label"
+                android:id="@+id/time_scheduled_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
@@ -51,7 +51,7 @@
                 android:visibility="gone" />
 
             <TextView
-                android:id="@+id/time_expected"
+                android:id="@+id/time_scheduled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"

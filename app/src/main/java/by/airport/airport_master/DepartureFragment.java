@@ -15,7 +15,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import by.airport.airport_master.entity.ArrivalInfo;
 import by.airport.airport_master.entity.DepartureInfo;
 import by.airport.airport_master.helpers.AirportListAdapter;
 import by.airport.airport_master.utils.Globals;
@@ -44,10 +43,10 @@ public class DepartureFragment extends Fragment {
 
     private void updateData() {
         progressBar.setVisibility(View.VISIBLE);
-        new ParseArrival().execute(Globals.DEPARTURE_URL);
+        new ParseDeparture().execute(Globals.DEPARTURE_URL);
     }
 
-    private class ParseArrival extends AsyncTask<String, Void, List<DepartureInfo>> {
+    private class ParseDeparture extends AsyncTask<String, Void, List<DepartureInfo>> {
         ParseTimetableImpl<DepartureInfo> parsedTimetable;
 
         protected List<DepartureInfo> doInBackground(String... arg) {
@@ -64,15 +63,15 @@ public class DepartureFragment extends Fragment {
         protected void onPostExecute(List<DepartureInfo> output) {
             progressBar.setVisibility(View.GONE);
             listView.setAdapter(new AirportListAdapter(getActivity(), R.layout.airport_list_adapter, output));
-            listView.setOnItemClickListener(onArrivalClickListener);
+            listView.setOnItemClickListener(onDepartureClickListener);
         }
     }
 
-    private AdapterView.OnItemClickListener onArrivalClickListener = new AdapterView.OnItemClickListener() {
+    private AdapterView.OnItemClickListener onDepartureClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Globals.arrivalInfo = (ArrivalInfo) parent.getAdapter().getItem(position);
-            Intent intent = new Intent(view.getContext(), ArrivalActivity.class);
+            Globals.departureInfo = (DepartureInfo) parent.getAdapter().getItem(position);
+            Intent intent = new Intent(view.getContext(), DepartureActivity.class);
             startActivity(intent);
         }
     };

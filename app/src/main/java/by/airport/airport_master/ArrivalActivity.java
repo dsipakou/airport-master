@@ -1,12 +1,12 @@
 package by.airport.airport_master;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import by.airport.airport_master.utils.Globals;
@@ -35,6 +35,14 @@ public class ArrivalActivity extends ActionBarActivity {
         TextView city = (TextView) findViewById(R.id.arrival_city);
         TextView code = (TextView) findViewById(R.id.arrival_code);
         TextView company = (TextView) findViewById(R.id.arrival_company);
+        TextView timeScheduled = (TextView) findViewById(R.id.arrival_scheduled);
+        TableRow actualRow = (TableRow) findViewById(R.id.arrival_actual_row);
+        TextView timeActual = (TextView) findViewById(R.id.arrival_actual);
+        TableRow statusRow = (TableRow) findViewById(R.id.arrival_status_row);
+        TextView status = (TextView) findViewById(R.id.arrival_status);
+
+        actualRow.setVisibility(View.GONE);
+        statusRow.setVisibility(View.GONE);
 
         if (city != null) {
             int resourceId = getResources().getIdentifier(
@@ -56,6 +64,31 @@ public class ArrivalActivity extends ActionBarActivity {
 
         if (company != null) {
             company.setText(Globals.arrivalInfo.getCompany());
+        }
+
+        if (timeScheduled != null) {
+            timeScheduled.setText(Globals.arrivalInfo.getExpectedTime());
+        }
+
+        if (timeActual != null && Globals.arrivalInfo.getActualTime() != null) {
+            actualRow.setVisibility(View.VISIBLE);
+            timeActual.setText(Globals.arrivalInfo.getActualTime());
+        }
+
+        if (status != null && Globals.arrivalInfo.getStatus() != null) {
+            statusRow.setVisibility(View.VISIBLE);
+            String tmpStatus = Globals.arrivalInfo.getStatus();
+            int resourceId = getResources()
+                    .getIdentifier(StringUtils
+                                    .replaceSpecialChars(tmpStatus),
+                            "string",
+                            getPackageName());
+
+            if (resourceId > 0) {
+                status.setText(getResources().getString(resourceId));
+            } else {
+                status.setText(tmpStatus);
+            }
         }
     }
 

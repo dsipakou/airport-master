@@ -2,7 +2,6 @@ package by.airport.airport_master.helpers;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,13 +42,13 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
         if (info != null) {
             TextView city = (TextView) view.findViewById(R.id.city);
             TextView code = (TextView) view.findViewById(R.id.code);
-            TextView timeExpected = (TextView) view.findViewById(R.id.time_expected);
-            TextView timeExpectedLabel = (TextView) view.findViewById(R.id.time_expected_label);
+            TextView timeScheduled = (TextView) view.findViewById(R.id.time_scheduled);
+            TextView timeScheduledLabel = (TextView) view.findViewById(R.id.time_scheduled_label);
             TextView timeActual = (TextView) view.findViewById(R.id.time_actual);
             TextView timeActualLabel = (TextView) view.findViewById(R.id.time_actual_label);
             TextView status = (TextView) view.findViewById(R.id.status);
             timeActualLabel.setVisibility(View.GONE);
-            timeExpectedLabel.setVisibility(View.GONE);
+            timeScheduledLabel.setVisibility(View.GONE);
             timeActual.setText("");
             status.setVisibility(View.GONE);
 
@@ -69,9 +68,9 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
                 code.setText("(" + info.getCode() + ")");
             }
 
-            if (timeExpected != null) {
-                timeExpectedLabel.setVisibility(View.VISIBLE);
-                timeExpected.setText(info.getExpectedTime());
+            if (timeScheduled != null) {
+                timeScheduledLabel.setVisibility(View.VISIBLE);
+                timeScheduled.setText(info.getExpectedTime());
             }
 
             if (timeActual != null && info.getActualTime() != null) {

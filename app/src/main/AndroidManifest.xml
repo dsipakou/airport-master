@@ -22,6 +22,10 @@
             android:label="@string/title_activity_arrival">
         </activity>
         <activity
+            android:name=".DepartureActivity"
+            android:label="@string/title_activity_departure">
+        </activity>
+        <activity
             android:name=".AirportPreferenceActivity"
             android:label="@string/settings_preferences">
         </activity>

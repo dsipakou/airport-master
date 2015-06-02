@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="by.airport.airport_master.ArrivalActivity">
+        tools:context="by.airport.airport_master.DepartureActivity">
 
         <include
             android:id="@+id/app_bar"
@@ -24,14 +24,14 @@
             android:paddingRight="15dp">
 
             <TextView
-                android:id="@+id/arrival_city"
+                android:id="@+id/departure_city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#FFF"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/arrival_code"
+                android:id="@+id/departure_code"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -44,11 +44,10 @@
             android:paddingRight="15dp"
             android:paddingTop="15dp">
 
-            <TableRow
-                android:paddingBottom="10dp">
+            <TableRow android:paddingBottom="10dp">
 
                 <TextView
-                    android:id="@+id/arrival_company_title"
+                    android:id="@+id/departure_company_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -56,17 +55,16 @@
                     android:text="@string/airline_label" />
 
                 <TextView
-                    android:id="@+id/arrival_company"
+                    android:id="@+id/departure_company"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="3" />
             </TableRow>
 
-            <TableRow
-                android:paddingBottom="10dp">
+            <TableRow android:paddingBottom="10dp">
 
                 <TextView
-                    android:id="@+id/arrival_scheduled_title"
+                    android:id="@+id/departure_scheduled_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -74,18 +72,18 @@
                     android:text="@string/scheduled_label" />
 
                 <TextView
-                    android:id="@+id/arrival_scheduled"
+                    android:id="@+id/departure_scheduled"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="3" />
             </TableRow>
 
             <TableRow
-                android:id="@+id/arrival_actual_row"
+                android:id="@+id/departure_actual_row"
                 android:paddingBottom="10dp">
 
                 <TextView
-                    android:id="@+id/arrival_actual_title"
+                    android:id="@+id/departure_actual_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -93,17 +91,18 @@
                     android:text="@string/estimated_label" />
 
                 <TextView
-                    android:id="@+id/arrival_actual"
+                    android:id="@+id/departure_actual"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="3" />
             </TableRow>
 
             <TableRow
-                android:id="@+id/arrival_status_row"
+                android:id="@+id/departure_status_row"
                 android:paddingBottom="10dp">
+
                 <TextView
-                    android:id="@+id/arrival_status_title"
+                    android:id="@+id/departure_status_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -111,7 +110,7 @@
                     android:text="@string/status_label" />
 
                 <TextView
-                    android:id="@+id/arrival_status"
+                    android:id="@+id/departure_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="3" />
