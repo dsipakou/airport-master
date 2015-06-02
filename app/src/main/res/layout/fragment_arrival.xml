@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="by.airport.airport_master.ArrivalFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ProgressBar
+        android:id="@+id/progress_arrival_fragment"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:layout_centerInParent="true"/>
+
+    <ListView
+        android:id="@+id/arrival_list_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+</FrameLayout>

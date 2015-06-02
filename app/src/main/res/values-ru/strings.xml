@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_localization">Локализация</string>
+    <string name="settings_language">Язык</string>
+    <string name="settings_preferences">Настройки</string>
+
+    <string name="app_name">Аэропорт Минск-2</string>
+    <string name="ok">ОК</string>
+    <string name="cancel">Отмена</string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_refresh">Обновить</string>
+    <string name="arrival_tab">Прибытие</string>
+    <string name="departure_tab">Вылет</string>
+    <string name="scheduled_label">По расписанию:</string>
+    <string name="estimated_label">Ожидаемое:</string>
+
+    <string name="title_activity_arrival">Прибытие</string>
+
+    <string name="LANDED">Прибыл</string>
+    <string name="CHECKIN">Регистрация</string>
+    <string name="BOARDING">Посадка</string>
+    <string name="DELAYED">Задержан</string>
+
+    <string name="ABUDHABI">Абу-Даби</string>
+    <string name="ALICANTE">Аликанте</string>
+    <string name="AMSTERDAM">Амстердам</string>
+    <string name="ANTALYA">Анталья</string>
+    <string name="ASHGABAT">Ашгабат</string>
+    <string name="ASTANA">Астана</string>
+    <string name="BARCELONA">Барселона</string>
+    <string name="BEIJING">Пекин</string>
+    <string name="BEIRUT">Бейрут</string>
+    <string name="BELGRADE">Белград</string>
+    <string name="BERGAMO">Бергамо</string>
+    <string name="BERLIN">Берлин</string>
+    <string name="BODRUM">Бодрум</string>
+    <string name="BUDAPEST">Будапешт</string>
+    <string name="EKATERINBURG">Екатеринбург</string>
+    <string name="FRANKFURT">Франкфурт</string>
+    <string name="GENEVA">Женева</string>
+    <string name="HELSINKI">Хельсинки</string>
+    <string name="HERAKLION">Ираклион</string>
+    <string name="HURGHADA">Хургада</string>
+    <string name="ISTANBUL">Стамбул</string>
+    <string name="IZMIR">Измир</string>
+    <string name="KALININGRAD">Калининград</string>
+    <string name="KERKYRA">Керкира</string>
+    <string name="KIEVBORISP">Киев (Бор-ль)</string>
+    <string name="KUTAISI">Кутаиси</string>
+    <string name="LARNACA">Ларнака</string>
+    <string name="LONDON">Лондон</string>
+    <string name="MILAN">Милан</string>
+    <string name="MOSCOWDME">Москва (Д-во)</string>
+    <string name="MOSCOWSVOD">Москва (ШРМ/D)</string>
+    <string name="PARIS">Париж</string>
+    <string name="PRAGUE">Прага</string>
+    <string name="RIGA">Рига</string>
+    <string name="RODOS">Родос</string>
+    <string name="ROME">Рим</string>
+    <string name="SAMARA">Самара</string>
+    <string name="SOCHI">Сочи</string>
+    <string name="STPETERSBURG">С.-Петербург</string>
+    <string name="STOCKHOLM">Стокгольм</string>
+    <string name="TBILISI">Тбилиси</string>
+    <string name="TEHRAN">Тегеран</string>
+    <string name="TELAVIV">Тель-Авив</string>
+    <string name="THESSALONIKI">Салоники</string>
+    <string name="TIVAT">Тиват</string>
+    <string name="VIENNA">Вена</string>
+    <string name="WARSAW">Варшава</string>
+    <string name="ZAKINTHOS">Закинтос</string>
+</resources>

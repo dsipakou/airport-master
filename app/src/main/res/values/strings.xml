@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="settings_localization">Localization</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_preferences">Preferences</string>
 
-    <string name="app_name">airport-master</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Minsk-2 Airport</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="action_settings">Settings</string>
     <string name="action_refresh">Refresh</string>
+    <string name="arrival_tab">Arrival</string>
+    <string name="departure_tab">Departure</string>
+    <string name="scheduled_label">Scheduled:</string>
+    <string name="estimated_label">Estimated:</string>
+
+    <string name="title_activity_arrival">Arrival</string>
+
+    <string name="airline_title">Airline</string>
+
+    <string name="LANDED">Landed</string>
+    <string name="CHECKIN">Check-in</string>
+    <string name="BOARDING">Boarding</string>
+    <string name="DELAYED">Delayed</string>
+
+    <string name="ABUDHABI">Abu Dhabi</string>
+    <string name="ALICANTE">Alicante</string>
+    <string name="AMSTERDAM">Amsterdam</string>
+    <string name="ANTALYA">Antalya</string>
+    <string name="ASHGABAT">Ashgabat</string>
+    <string name="ASTANA">Astana</string>
+    <string name="BARCELONA">Barcelona</string>
+    <string name="BEIJING">Beijing</string>
+    <string name="BEIRUT">Beirut</string>
+    <string name="BELGRADE">Belgrade</string>
+    <string name="BERGAMO">Bergamo</string>
+    <string name="BERLIN">Berlin</string>
+    <string name="BODRUM">Bodrum</string>
+    <string name="BUDAPEST">Budapest</string>
+    <string name="EKATERINBURG">Ekaterinburg</string>
+    <string name="FRANKFURT">Frankfurt</string>
+    <string name="HELSINKI">Helsinki</string>
+    <string name="HERAKLION">Heraklion</string>
+    <string name="HURGHADA">Hurgada</string>
+    <string name="GENEVA">Geneva</string>
+    <string name="ISTANBUL">Istanbul</string>
+    <string name="IZMIR">Izmir</string>
+    <string name="KALININGRAD">Kaliningrad</string>
+    <string name="KERKYRA">Kerkyra</string>
+    <string name="KIEVBORISP">Kiev (BORISP)</string>
+    <string name="KUTAISI">Kutaisi</string>
+    <string name="LARNACA">Larnaca</string>
+    <string name="LONDON">London</string>
+    <string name="MILAN">Milan</string>
+    <string name="MOSCOWDME">Moscow (DME)</string>
+    <string name="MOSCOWSVOD">Moscow (SVO/D)</string>
+    <string name="PARIS">Paris</string>
+    <string name="PRAGUE">Prague</string>
+    <string name="RIGA">Riga</string>
+    <string name="RODOS">Rodos</string>
+    <string name="ROME">Rome</string>
+    <string name="SAMARA">Samara</string>
+    <string name="SOCHI">Sochi</string>
+    <string name="STPETERSBURG">St. Petersburg</string>
+    <string name="STOCKHOLM">Stockholm</string>
+    <string name="TBILISI">Tbilisi</string>
+    <string name="TEHRAN">Tehran</string>
+    <string name="TELAVIV">Tel Aviv</string>
+    <string name="THESSALONIKI">Thessaloniki</string>
+    <string name="TIVAT">Tivat</string>
+    <string name="VIENNA">Vienna</string>
+    <string name="WARSAW">Warsaw</string>
+    <string name="ZAKINTHOS">Zakinthos</string>
 
 </resources>

@@ -1,57 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <TableRow
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:textColor="#444444"
-            android:textSize="24sp"
-            android:id="@+id/city"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_weight="5"
-            android:typeface="monospace"
-            android:height="40sp"/>
-        <TextView
-            android:layout_weight="2"
-            android:id="@+id/code"
-            android:textSize="12sp"
-            android:height="20sp"
-            android:gravity="right"
-            />
-    </TableRow>
-    <TableRow android:layout_height="wrap_content"
-        android:layout_width="fill_parent">
-        <TextView android:textColor="#222222"
-            android:id="@+id/time_expected"
-            android:textSize="16sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:height="25sp" />
+    <TableLayout>
 
-    </TableRow>
-    <TableRow android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <TextView android:layout_height="wrap_content"
+        <TableRow
             android:layout_width="fill_parent"
-            android:textSize="16sp"
-            android:layout_weight="1"
-            android:textColor="#222222"
-            android:gravity="left"
-            android:id="@+id/time_actual"
-            android:height="25sp" />
-        <TextView
-            android:id="@+id/status"
-            android:textSize="10sp"
-            android:height="25sp"
-            android:gravity="right"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:height="40sp"
+                android:textColor="#444444"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+
+            <TextView
+                android:id="@+id/code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:height="20sp"
+                android:gravity="end"
+                android:textSize="12sp" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/time_expected_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:height="25sp"
+                android:gravity="center_vertical"
+                android:text="@string/scheduled_label"
+                android:textColor="#222222"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/time_expected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:height="25sp"
+                android:gravity="center_vertical"
+                android:textColor="#222222"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_width="fill_parent"
-            android:layout_weight="1" />
-    </TableRow>
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/time_actual_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:height="25sp"
+                android:gravity="center_vertical"
+                android:text="@string/estimated_label"
+                android:textColor="#222222"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/time_actual"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:height="25sp"
+                android:gravity="center_vertical"
+                android:textColor="#222222"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:height="25sp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:background="@drawable/back"/>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
 </TableLayout>
