@@ -44,15 +44,19 @@ public class AirportPreferenceActivity extends PreferenceActivity {
 
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-            Preference preference = findPreference(key);
+            //Preference preference = findPreference(key);
             if (key.equals("language")) {
                 Localization.changeLocal(getActivity(), getActivity().getBaseContext(), new Locale(sharedPreferences.getString(key, "")));
             }
-            Intent restartIntent = new Intent(getActivity(), MainActivity.class);
+            /*Intent restartIntent = new Intent(getActivity(), MainActivity.class);
             restartIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(restartIntent);
             getActivity().finish();
+            startActivity(restartIntent);*/
 
+            Intent i = getActivity().getBaseContext().getPackageManager()
+                    .getLaunchIntentForPackage( getActivity().getBaseContext().getPackageName() );
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(i);
         }
     }
 }

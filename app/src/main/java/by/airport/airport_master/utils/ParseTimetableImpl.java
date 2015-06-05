@@ -27,6 +27,7 @@ public class ParseTimetableImpl<T extends FlightInfo> implements ParseTimetable<
                 info.setActualTime(htmlParser.getCellInner(cell, 5));
                 info.setCode(htmlParser.getCellInner(cell, 7));
                 info.setCity(htmlParser.getCellInner(cell, 9));
+                info.setGate(htmlParser.getCellInner(cell, 11));
                 info.setStatus(htmlParser.getCellInner(cell, 13));
                 infos.add(info);
             }

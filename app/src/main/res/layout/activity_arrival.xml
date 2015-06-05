@@ -116,6 +116,23 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3" />
             </TableRow>
+            <TableRow
+                android:id="@+id/arrival_gate_row"
+                android:paddingBottom="10dp">
+                <TextView
+                    android:id="@+id/arrival_gate_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingRight="10dp"
+                    android:text="@string/gate_label" />
+
+                <TextView
+                    android:id="@+id/arrival_gate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3" />
+            </TableRow>
 
         </TableLayout>
     </LinearLayout>

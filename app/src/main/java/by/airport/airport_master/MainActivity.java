@@ -29,7 +29,6 @@ public class MainActivity extends ActionBarActivity {
         timetableCreate();
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);

@@ -36,6 +36,7 @@ public class DepartureActivity extends ActionBarActivity {
         TextView timeActual = (TextView) findViewById(R.id.departure_actual);
         TableRow statusRow = (TableRow) findViewById(R.id.departure_status_row);
         TextView status = (TextView) findViewById(R.id.departure_status);
+        TextView gate = (TextView) findViewById(R.id.departure_gate);
 
         actualRow.setVisibility(View.GONE);
         statusRow.setVisibility(View.GONE);
@@ -86,6 +87,10 @@ public class DepartureActivity extends ActionBarActivity {
             } else {
                 status.setText(tmpStatus);
             }
+        }
+
+        if (gate != null && Globals.departureInfo.getGate() != null) {
+            gate.setText(Globals.departureInfo.getGate());
         }
     }
 }

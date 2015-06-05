@@ -40,6 +40,7 @@ public class ArrivalActivity extends ActionBarActivity {
         TextView timeActual = (TextView) findViewById(R.id.arrival_actual);
         TableRow statusRow = (TableRow) findViewById(R.id.arrival_status_row);
         TextView status = (TextView) findViewById(R.id.arrival_status);
+        TextView gate = (TextView) findViewById(R.id.arrival_gate);
 
         actualRow.setVisibility(View.GONE);
         statusRow.setVisibility(View.GONE);
@@ -89,6 +90,10 @@ public class ArrivalActivity extends ActionBarActivity {
             } else {
                 status.setText(tmpStatus);
             }
+        }
+
+        if (gate != null && Globals.arrivalInfo.getGate() != null) {
+            gate.setText(Globals.arrivalInfo.getGate());
         }
     }
 

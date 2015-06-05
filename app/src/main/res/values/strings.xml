@@ -15,6 +15,7 @@
     <string name="estimated_label">Estimated</string>
     <string name="status_label">Status</string>
     <string name="airline_label">Airline</string>
+    <string name="gate_label">Gate</string>
 
     <string name="title_activity_arrival">Arrival</string>
     <string name="title_activity_departure">Departure</string>
@@ -26,41 +27,50 @@
 
     <string name="ABUDHABI">Abu Dhabi</string>
     <string name="ALICANTE">Alicante</string>
+    <string name="ALMATY">Almaty</string>
     <string name="AMSTERDAM">Amsterdam</string>
     <string name="ANTALYA">Antalya</string>
+    <string name="ARAXOS">Araxos</string>
     <string name="ASHGABAT">Ashgabat</string>
     <string name="ASTANA">Astana</string>
+    <string name="BAKU">Baku</string>
     <string name="BARCELONA">Barcelona</string>
+    <string name="BATUMI">Batumi</string>
     <string name="BEIJING">Beijing</string>
     <string name="BEIRUT">Beirut</string>
     <string name="BELGRADE">Belgrade</string>
     <string name="BERGAMO">Bergamo</string>
     <string name="BERLIN">Berlin</string>
     <string name="BODRUM">Bodrum</string>
+    <string name="BOURGAS">Bourgas</string>
     <string name="BUDAPEST">Budapest</string>
     <string name="EKATERINBURG">Ekaterinburg</string>
     <string name="FRANKFURT">Frankfurt</string>
+    <string name="GENEVA">Geneva</string>
+    <string name="HANOVER">Hanover</string>
     <string name="HELSINKI">Helsinki</string>
     <string name="HERAKLION">Heraklion</string>
     <string name="HURGHADA">Hurgada</string>
-    <string name="GENEVA">Geneva</string>
     <string name="ISTANBUL">Istanbul</string>
     <string name="IZMIR">Izmir</string>
     <string name="KALININGRAD">Kaliningrad</string>
     <string name="KERKYRA">Kerkyra</string>
     <string name="KIEVBORISP">Kiev (BORISP)</string>
+    <string name="KRASNODAR">Krasnodar</string>
     <string name="KUTAISI">Kutaisi</string>
     <string name="LARNACA">Larnaca</string>
     <string name="LONDON">London</string>
     <string name="MILAN">Milan</string>
     <string name="MOSCOWDME">Moscow (DME)</string>
     <string name="MOSCOWSVOD">Moscow (SVO/D)</string>
+    <string name="NICE">Nice</string>
     <string name="PARIS">Paris</string>
     <string name="PRAGUE">Prague</string>
     <string name="RIGA">Riga</string>
     <string name="RODOS">Rodos</string>
     <string name="ROME">Rome</string>
     <string name="SAMARA">Samara</string>
+    <string name="SHARMESHEIK">Sharm el-Sheikh</string>
     <string name="SOCHI">Sochi</string>
     <string name="STPETERSBURG">St. Petersburg</string>
     <string name="STOCKHOLM">Stockholm</string>
@@ -69,8 +79,10 @@
     <string name="TELAVIV">Tel Aviv</string>
     <string name="THESSALONIKI">Thessaloniki</string>
     <string name="TIVAT">Tivat</string>
+    <string name="VARNA">Varna</string>
     <string name="VIENNA">Vienna</string>
     <string name="WARSAW">Warsaw</string>
+    <string name="YEREVAN">Yerevan</string>
     <string name="ZAKINTHOS">Zakinthos</string>
 
 </resources>

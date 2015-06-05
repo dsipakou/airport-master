@@ -1,5 +1,6 @@
 package by.airport.airport_master;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -25,6 +26,13 @@ public class ArrivalFragment extends Fragment {
 
     private ProgressBar progressBar;
     private ListView listView;
+    private Activity mParentActivity = null;
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        mParentActivity = activity;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,7 +70,7 @@ public class ArrivalFragment extends Fragment {
 
         protected void onPostExecute(List<ArrivalInfo> output) {
             progressBar.setVisibility(View.GONE);
-            listView.setAdapter(new AirportListAdapter(getActivity(), R.layout.airport_list_adapter, output));
+            listView.setAdapter(new AirportListAdapter(mParentActivity, R.layout.airport_list_adapter, output));
             listView.setOnItemClickListener(onArrivalClickListener);
         }
     }

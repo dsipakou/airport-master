@@ -112,6 +112,9 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
                         bgShape.setColor(Color.YELLOW);
                         status.setTextColor(Color.parseColor("#4E5200"));
                         break;
+                    default:
+                        status.setVisibility(View.GONE);
+                        break;
                 }
             }
         }
