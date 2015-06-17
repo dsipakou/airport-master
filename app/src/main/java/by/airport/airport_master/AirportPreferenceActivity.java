@@ -45,7 +45,7 @@ public class AirportPreferenceActivity extends PreferenceActivity {
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
             //Preference preference = findPreference(key);
-            if (key.equals("language")) {
+            if (key.equals(R.string.locale_lang)) {
                 Localization.changeLocal(getActivity(), getActivity().getBaseContext(), new Locale(sharedPreferences.getString(key, "")));
             }
             /*Intent restartIntent = new Intent(getActivity(), MainActivity.class);

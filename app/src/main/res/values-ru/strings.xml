@@ -33,6 +33,7 @@
     <string name="ARAXOS">Араксос</string>
     <string name="ASHGABAT">Ашгабат</string>
     <string name="ASTANA">Астана</string>
+    <string name="ATHENS">Афины</string>
     <string name="BAKU">Баку</string>
     <string name="BARCELONA">Барселона</string>
     <string name="BATUMI">Батуми</string>
@@ -44,9 +45,11 @@
     <string name="BODRUM">Бодрум</string>
     <string name="BOURGAS">Бургас</string>
     <string name="BUDAPEST">Будапешт</string>
+    <string name="CATANIA">Катанья</string>
     <string name="EKATERINBURG">Екатеринбург</string>
     <string name="FRANKFURT">Франкфурт</string>
     <string name="GENEVA">Женева</string>
+    <string name="GOMEL">Гомель</string>
     <string name="HANOVER">Ганновер</string>
     <string name="HELSINKI">Хельсинки</string>
     <string name="HERAKLION">Ираклион</string>
@@ -65,6 +68,7 @@
     <string name="MOSCOWSVOD">Москва (ШРМ/D)</string>
     <string name="NICE">Ницца</string>
     <string name="PARIS">Париж</string>
+    <string name="PODGORICA">Подгорица</string>
     <string name="PRAGUE">Прага</string>
     <string name="RIGA">Рига</string>
     <string name="RODOS">Родос</string>
@@ -81,6 +85,7 @@
     <string name="TIVAT">Тиват</string>
     <string name="VARNA">Варна</string>
     <string name="VIENNA">Вена</string>
+    <string name="VILNIUS">Вильнюс</string>
     <string name="WARSAW">Варшава</string>
     <string name="YEREVAN">Ереван</string>
     <string name="ZAKINTHOS">Закинтос</string>
