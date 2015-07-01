@@ -6,7 +6,7 @@
 
     <string name="locale_lang">language</string>
 
-    <string name="app_name">Minsk-2 Airport</string>
+    <string name="app_name">Minsk Airport</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="action_settings">Settings</string>
@@ -38,9 +38,11 @@
     <string name="ATHENS">Athens</string>
     <string name="BAKU">Baku</string>
     <string name="BARCELONA">Barcelona</string>
+    <string name="BARI">Bari</string>
     <string name="BATUMI">Batumi</string>
     <string name="BEIJING">Beijing</string>
     <string name="BEIRUT">Beirut</string>
+    <string name="BELFAST">Belfast</string>
     <string name="BELGRADE">Belgrade</string>
     <string name="BERGAMO">Bergamo</string>
     <string name="BERLIN">Berlin</string>
@@ -49,6 +51,7 @@
     <string name="BUDAPEST">Budapest</string>
     <string name="CATANIA">Catania</string>
     <string name="EKATERINBURG">Ekaterinburg</string>
+    <string name="ENFIDHA">Enfidha</string>
     <string name="FRANKFURT">Frankfurt</string>
     <string name="GENEVA">Geneva</string>
     <string name="GOMEL">Gomel</string>
@@ -61,6 +64,7 @@
     <string name="KALININGRAD">Kaliningrad</string>
     <string name="KERKYRA">Kerkyra</string>
     <string name="KIEVBORISP">Kiev (BORISP)</string>
+    <string name="KOSTANAY">Kostanay</string>
     <string name="KRASNODAR">Krasnodar</string>
     <string name="KUTAISI">Kutaisi</string>
     <string name="LARNACA">Larnaca</string>
@@ -73,6 +77,7 @@
     <string name="PODGORICA">Podgorica</string>
     <string name="PRAGUE">Prague</string>
     <string name="RIGA">Riga</string>
+    <string name="RIMINI">Rimini</string>
     <string name="RODOS">Rodos</string>
     <string name="ROME">Rome</string>
     <string name="SAMARA">Samara</string>
@@ -84,8 +89,11 @@
     <string name="TEHRAN">Tehran</string>
     <string name="TELAVIV">Tel Aviv</string>
     <string name="THESSALONIKI">Thessaloniki</string>
+    <string name="TIRANA">Tirana</string>
     <string name="TIVAT">Tivat</string>
+    <string name="TREVIZO">Trevizo</string>
     <string name="VARNA">Varna</string>
+    <string name="VENICE">Venice</string>
     <string name="VIENNA">Vienna</string>
     <string name="VILNIUS">Vilnius</string>
     <string name="WARSAW">Warsaw</string>
