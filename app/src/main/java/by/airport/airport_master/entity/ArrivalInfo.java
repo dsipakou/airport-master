@@ -1,5 +1,7 @@
 package by.airport.airport_master.entity;
 
+import by.airport.airport_master.helpers.Statuses;
+
 /**
  * Created by dzianis.sipakou on 5/19/2015.
  */
@@ -11,7 +13,7 @@ public class ArrivalInfo implements FlightInfo {
     private String expectedTime;
     private String actualTime;
     private String city;
-    private String status;
+    private Statuses status;
 
     public String getCompany() {
         return company;
@@ -61,11 +63,21 @@ public class ArrivalInfo implements FlightInfo {
         this.city = city;
     }
 
-    public String getStatus() {
+    public Statuses getStatus() {
         return status;
     }
 
     public void setStatus(String status) {
-        this.status = status;
+        if (status != null) {
+            if (status.contains("LANDED")) {
+                this.status = Statuses.LANDED;
+            } else if (status.contains("DELAYED")) {
+                this.status = Statuses.DELAYED;
+            } else if (status.contains("BOARDING")) {
+                this.status = Statuses.BOARDING;
+            } else if (status.contains("CHECK-IN")) {
+                this.status = Statuses.CHECKIN;
+            }
+        }
     }
 }

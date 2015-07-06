@@ -80,35 +80,33 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
 
             if (status != null && info.getStatus() != null) {
                 status.setVisibility(View.VISIBLE);
-                String tmpStatus = info.getStatus();
+                Statuses tmpStatus = info.getStatus();
                 int resourceId = view.getResources()
                         .getIdentifier(StringUtils
-                                        .replaceSpecialChars(tmpStatus),
+                                        .replaceSpecialChars(tmpStatus.name()),
                                         "string",
                                         getContext().getPackageName());
 
                 if (resourceId > 0) {
                     status.setText(view.getResources().getString(resourceId));
-                } else {
-                    status.setText(tmpStatus);
                 }
 
                 GradientDrawable bgShape = (GradientDrawable) status.getBackground();
 
                 switch (tmpStatus) {
-                    case "LANDED":
+                    case LANDED:
                         bgShape.setColor(Color.parseColor("#0AC20A"));
                         status.setTextColor(Color.WHITE);
                         break;
-                    case "DELAYED":
+                    case DELAYED:
                         bgShape.setColor(Color.RED);
                         status.setTextColor(Color.WHITE);
                         break;
-                    case "BOARDING":
+                    case BOARDING:
                         bgShape.setColor(Color.parseColor("#0AC20A"));
                         status.setTextColor(Color.WHITE);
                         break;
-                    case "CHECK-IN":
+                    case CHECKIN:
                         bgShape.setColor(Color.YELLOW);
                         status.setTextColor(Color.parseColor("#4E5200"));
                         break;

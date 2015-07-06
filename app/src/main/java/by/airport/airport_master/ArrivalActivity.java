@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import by.airport.airport_master.helpers.Statuses;
 import by.airport.airport_master.utils.Globals;
 import by.airport.airport_master.utils.StringUtils;
 
@@ -78,17 +79,15 @@ public class ArrivalActivity extends ActionBarActivity {
 
         if (status != null && Globals.arrivalInfo.getStatus() != null) {
             statusRow.setVisibility(View.VISIBLE);
-            String tmpStatus = Globals.arrivalInfo.getStatus();
+            Statuses tmpStatus = Globals.arrivalInfo.getStatus();
             int resourceId = getResources()
                     .getIdentifier(StringUtils
-                                    .replaceSpecialChars(tmpStatus),
+                                    .replaceSpecialChars(tmpStatus.name()),
                             "string",
                             getPackageName());
 
             if (resourceId > 0) {
                 status.setText(getResources().getString(resourceId));
-            } else {
-                status.setText(tmpStatus);
             }
         }
 

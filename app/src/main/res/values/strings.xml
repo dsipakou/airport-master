@@ -31,6 +31,7 @@
     <string name="ALICANTE">Alicante</string>
     <string name="ALMATY">Almaty</string>
     <string name="AMSTERDAM">Amsterdam</string>
+    <string name="ANCONA">Ancona</string>
     <string name="ANTALYA">Antalya</string>
     <string name="ARAXOS">Araxos</string>
     <string name="ASHGABAT">Ashgabat</string>
@@ -50,6 +51,7 @@
     <string name="BOURGAS">Bourgas</string>
     <string name="BUDAPEST">Budapest</string>
     <string name="CATANIA">Catania</string>
+    <string name="CONSTANTA">Constanta</string>
     <string name="EKATERINBURG">Ekaterinburg</string>
     <string name="ENFIDHA">Enfidha</string>
     <string name="FRANKFURT">Frankfurt</string>
@@ -62,6 +64,7 @@
     <string name="ISTANBUL">Istanbul</string>
     <string name="IZMIR">Izmir</string>
     <string name="KALININGRAD">Kaliningrad</string>
+    <string name="KARAGANDA">Karaganda</string>
     <string name="KERKYRA">Kerkyra</string>
     <string name="KIEVBORISP">Kiev (BORISP)</string>
     <string name="KOSTANAY">Kostanay</string>
@@ -69,10 +72,12 @@
     <string name="KUTAISI">Kutaisi</string>
     <string name="LARNACA">Larnaca</string>
     <string name="LONDON">London</string>
+    <string name="MANCHESTER">Manchester</string>
     <string name="MILAN">Milan</string>
     <string name="MOSCOWDME">Moscow (DME)</string>
     <string name="MOSCOWSVOD">Moscow (SVO/D)</string>
     <string name="NICE">Nice</string>
+    <string name="PALMAMALLORC">Palma</string>
     <string name="PARIS">Paris</string>
     <string name="PODGORICA">Podgorica</string>
     <string name="PRAGUE">Prague</string>
