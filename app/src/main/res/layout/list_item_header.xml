@@ -1,0 +1,19 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="22dp" >
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginTop="0dp"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:background="#666666"
+        android:textIsSelectable="false" />
+
+</FrameLayout>

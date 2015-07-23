@@ -1,5 +1,6 @@
 package by.airport.airport_master;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -16,15 +17,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 import by.airport.airport_master.entity.DepartureInfo;
+import by.airport.airport_master.entity.FullFlightInfo;
 import by.airport.airport_master.helpers.AirportListAdapter;
 import by.airport.airport_master.utils.Globals;
 import by.airport.airport_master.utils.ParseTimetableImpl;
+import dev.dworks.libs.astickyheader.SimpleSectionedListAdapter;
 
 public class DepartureFragment extends Fragment {
 
-
     private ListView listView;
     private ProgressBar progressBar;
+    private Activity mParentActivity = null;
+    private AirportListAdapter mAdapter;
+    private ArrayList<SimpleSectionedListAdapter.Section> sections = new ArrayList<SimpleSectionedListAdapter.Section>();
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        mParentActivity = activity;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,12 +57,12 @@ public class DepartureFragment extends Fragment {
         new ParseDeparture().execute(Globals.DEPARTURE_URL);
     }
 
-    private class ParseDeparture extends AsyncTask<String, Void, List<DepartureInfo>> {
+    private class ParseDeparture extends AsyncTask<String, Void, FullFlightInfo<DepartureInfo>> {
         ParseTimetableImpl<DepartureInfo> parsedTimetable;
 
-        protected List<DepartureInfo> doInBackground(String... arg) {
+        protected FullFlightInfo<DepartureInfo> doInBackground(String... arg) {
             parsedTimetable = new ParseTimetableImpl<>();
-            List<DepartureInfo> output = new ArrayList<>();
+            FullFlightInfo<DepartureInfo> output = new FullFlightInfo<>();
             try {
                 output = parsedTimetable.getDetailsList(new URL(arg[0]), DepartureInfo.class);
             } catch (Exception e) {
@@ -60,9 +71,17 @@ public class DepartureFragment extends Fragment {
             return output;
         }
 
-        protected void onPostExecute(List<DepartureInfo> output) {
+        protected void onPostExecute(FullFlightInfo<DepartureInfo> output) {
             progressBar.setVisibility(View.GONE);
-            listView.setAdapter(new AirportListAdapter(getActivity(), R.layout.airport_list_adapter, output));
+
+            mAdapter = new AirportListAdapter(mParentActivity, R.layout.airport_list_adapter, output.getFlightInfo());
+            for (int i = 0; i < output.getPositions().size() - 1; i ++) {
+                sections.add(new SimpleSectionedListAdapter.Section(output.getPositions().get(i), output.getHeaders().get(i)));
+            }
+            SimpleSectionedListAdapter simpleSectionedListAdapter;
+            simpleSectionedListAdapter = new SimpleSectionedListAdapter(mParentActivity, mAdapter, R.layout.list_item_header, R.id.header);
+            simpleSectionedListAdapter.setSections(sections.toArray(new SimpleSectionedListAdapter.Section[0]));
+            listView.setAdapter(simpleSectionedListAdapter);
             listView.setOnItemClickListener(onDepartureClickListener);
         }
     }

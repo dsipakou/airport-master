@@ -52,6 +52,7 @@
     <string name="BUDAPEST">Будапешт</string>
     <string name="CATANIA">Катанья</string>
     <string name="CONSTANTA">Констанца</string>
+    <string name="DUBLIN">Дублин</string>
     <string name="EKATERINBURG">Екатеринбург</string>
     <string name="ENFIDHA">Энфида</string>
     <string name="FRANKFURT">Франкфурт</string>
@@ -67,6 +68,7 @@
     <string name="KARAGANDA">Караганда</string>
     <string name="KERKYRA">Керкира</string>
     <string name="KIEVBORISP">Киев (Бор-ль)</string>
+    <string name="KLAGENFURT">Клагенфурт</string>
     <string name="KOSTANAY">Костанай</string>
     <string name="KRASNODAR">Краснодар</string>
     <string name="KUTAISI">Кутаиси</string>
@@ -76,9 +78,11 @@
     <string name="MILAN">Милан</string>
     <string name="MOSCOWDME">Москва (Д-во)</string>
     <string name="MOSCOWSVOD">Москва (ШРМ/D)</string>
+    <string name="MUNICH">Мюнхен</string>
     <string name="NICE">Ницца</string>
     <string name="PALMAMALLORC">Пальма</string>
     <string name="PARIS">Париж</string>
+    <string name="PAVLODAR">Павлодар</string>
     <string name="PODGORICA">Подгорица</string>
     <string name="PRAGUE">Прага</string>
     <string name="RIGA">Рига</string>
@@ -90,6 +94,7 @@
     <string name="SOCHI">Сочи</string>
     <string name="STPETERSBURG">С.-Петербург</string>
     <string name="STOCKHOLM">Стокгольм</string>
+    <string name="TASHKENT">Ташкент</string>
     <string name="TBILISI">Тбилиси</string>
     <string name="TEHRAN">Тегеран</string>
     <string name="TELAVIV">Тель-Авив</string>

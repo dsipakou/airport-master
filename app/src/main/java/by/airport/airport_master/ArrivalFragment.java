@@ -17,9 +17,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import by.airport.airport_master.entity.ArrivalInfo;
+import by.airport.airport_master.entity.FullFlightInfo;
 import by.airport.airport_master.helpers.AirportListAdapter;
 import by.airport.airport_master.utils.Globals;
 import by.airport.airport_master.utils.ParseTimetableImpl;
+import dev.dworks.libs.astickyheader.SimpleSectionedListAdapter;
 
 
 public class ArrivalFragment extends Fragment {
@@ -27,6 +29,8 @@ public class ArrivalFragment extends Fragment {
     private ProgressBar progressBar;
     private ListView listView;
     private Activity mParentActivity = null;
+    private AirportListAdapter mAdapter;
+    private ArrayList<SimpleSectionedListAdapter.Section> sections = new ArrayList<SimpleSectionedListAdapter.Section>();
 
     @Override
     public void onAttach(Activity activity) {
@@ -54,12 +58,13 @@ public class ArrivalFragment extends Fragment {
         new ParseArrival().execute(Globals.ARRIVAL_URL);
     }
 
-    private class ParseArrival extends AsyncTask<String, Void, List<ArrivalInfo>> {
+    private class ParseArrival extends AsyncTask<String, Void, FullFlightInfo<ArrivalInfo>> {
         ParseTimetableImpl<ArrivalInfo> parsedTimetable;
 
-        protected List<ArrivalInfo> doInBackground(String... arg) {
+        protected FullFlightInfo<ArrivalInfo> doInBackground(String... arg) {
             parsedTimetable = new ParseTimetableImpl<>();
-            List<ArrivalInfo> output = new ArrayList<>();
+
+            FullFlightInfo<ArrivalInfo> output = new FullFlightInfo<>();
             try {
                 output = parsedTimetable.getDetailsList(new URL(arg[0]), ArrivalInfo.class);
             } catch (Exception e) {
@@ -68,9 +73,16 @@ public class ArrivalFragment extends Fragment {
             return output;
         }
 
-        protected void onPostExecute(List<ArrivalInfo> output) {
+        protected void onPostExecute(FullFlightInfo<ArrivalInfo> output) {
             progressBar.setVisibility(View.GONE);
-            listView.setAdapter(new AirportListAdapter(mParentActivity, R.layout.airport_list_adapter, output));
+            mAdapter = new AirportListAdapter(mParentActivity, R.layout.airport_list_adapter, output.getFlightInfo());
+            for (int i = 0; i < output.getPositions().size() - 1; i ++) {
+                sections.add(new SimpleSectionedListAdapter.Section(output.getPositions().get(i), output.getHeaders().get(i)));
+            }
+            SimpleSectionedListAdapter simpleSectionedListAdapter;
+            simpleSectionedListAdapter = new SimpleSectionedListAdapter(mParentActivity, mAdapter, R.layout.list_item_header, R.id.header);
+            simpleSectionedListAdapter.setSections(sections.toArray(new SimpleSectionedListAdapter.Section[0]));
+            listView.setAdapter(simpleSectionedListAdapter);
             listView.setOnItemClickListener(onArrivalClickListener);
         }
     }

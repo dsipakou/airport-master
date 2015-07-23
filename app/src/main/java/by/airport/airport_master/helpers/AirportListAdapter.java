@@ -84,8 +84,8 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
                 int resourceId = view.getResources()
                         .getIdentifier(StringUtils
                                         .replaceSpecialChars(tmpStatus.name()),
-                                        "string",
-                                        getContext().getPackageName());
+                                "string",
+                                getContext().getPackageName());
 
                 if (resourceId > 0) {
                     status.setText(view.getResources().getString(resourceId));

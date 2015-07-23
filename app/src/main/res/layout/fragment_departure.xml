@@ -3,7 +3,6 @@
     android:layout_height="match_parent"
     tools:context="by.airport.airport_master.DepartureFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <ProgressBar
         android:id="@+id/progress_departure_fragment"
         android:visibility="visible"
@@ -13,10 +12,11 @@
         android:indeterminate="true"
         android:layout_centerInParent="true"/>
 
-    <ListView
+    <dev.dworks.libs.astickyheader.ui.PinnedSectionListView
         android:id="@+id/departure_list_fragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </ListView>
+        android:layout_height="wrap_content"
+        android:scrollbarStyle="outsideOverlay">
+    </dev.dworks.libs.astickyheader.ui.PinnedSectionListView>
 
 </FrameLayout>
