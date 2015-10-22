@@ -44,6 +44,7 @@
     <string name="BEIJING">Beijing</string>
     <string name="BEIRUT">Beirut</string>
     <string name="BELFAST">Belfast</string>
+    <string name="BELGOROD">Belgorod</string>
     <string name="BELGRADE">Belgrade</string>
     <string name="BERGAMO">Bergamo</string>
     <string name="BERLIN">Berlin</string>
@@ -51,6 +52,8 @@
     <string name="BOURGAS">Bourgas</string>
     <string name="BUDAPEST">Budapest</string>
     <string name="CATANIA">Catania</string>
+    <string name="CHEREPOVETS">Cherepovets</string>
+    <string name="COLOGNE">Cologne</string>
     <string name="CONSTANTA">Constanta</string>
     <string name="DUBLIN">Dublin</string>
     <string name="EKATERINBURG">Ekaterinburg</string>
@@ -67,6 +70,7 @@
     <string name="KALININGRAD">Kaliningrad</string>
     <string name="KARAGANDA">Karaganda</string>
     <string name="KERKYRA">Kerkyra</string>
+    <string name="KHMANSIYSK">Kh-Mansiysk</string>
     <string name="KIEVBORISP">Kiev (BORISP)</string>
     <string name="KLAGENFURT">Klagenfurt</string>
     <string name="KOSTANAY">Kostanay</string>
@@ -74,12 +78,16 @@
     <string name="KUTAISI">Kutaisi</string>
     <string name="LARNACA">Larnaca</string>
     <string name="LONDON">London</string>
+    <string name="LUXEMBOURG">Luxembourg</string>
     <string name="MANCHESTER">Manchester</string>
     <string name="MILAN">Milan</string>
     <string name="MOSCOWDME">Moscow (DME)</string>
+    <string name="MOSCOWVKO">Moscow (VKO)</string>
     <string name="MOSCOWSVOD">Moscow (SVO/D)</string>
     <string name="MUNICH">Munich</string>
     <string name="NICE">Nice</string>
+    <string name="NIZHNEKAMSK">Nizhnekamsk</string>
+    <string name="NIZNOVGOROD">N. Novgorod</string>
     <string name="PALMAMALLORC">Palma</string>
     <string name="PARIS">Paris</string>
     <string name="PAVLODAR">Pavlodar</string>
@@ -89,6 +97,7 @@
     <string name="RIMINI">Rimini</string>
     <string name="RODOS">Rodos</string>
     <string name="ROME">Rome</string>
+    <string name="SALZBURG">Salzburg</string>
     <string name="SAMARA">Samara</string>
     <string name="SHARMESHEIK">Sharm el-Sheikh</string>
     <string name="SOCHI">Sochi</string>
@@ -109,5 +118,5 @@
     <string name="WARSAW">Warsaw</string>
     <string name="YEREVAN">Yerevan</string>
     <string name="ZAKINTHOS">Zakinthos</string>
-
+    <string name="ZURICH">Zurich</string>
 </resources>

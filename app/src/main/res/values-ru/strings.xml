@@ -44,6 +44,7 @@
     <string name="BEIJING">Пекин</string>
     <string name="BEIRUT">Бейрут</string>
     <string name="BELFAST">Белфаст</string>
+    <string name="BELGOROD">Белгород</string>
     <string name="BELGRADE">Белград</string>
     <string name="BERGAMO">Бергамо</string>
     <string name="BERLIN">Берлин</string>
@@ -51,6 +52,8 @@
     <string name="BOURGAS">Бургас</string>
     <string name="BUDAPEST">Будапешт</string>
     <string name="CATANIA">Катанья</string>
+    <string name="CHEREPOVETS">Череповец</string>
+    <string name="COLOGNE">Кёльн</string>
     <string name="CONSTANTA">Констанца</string>
     <string name="DUBLIN">Дублин</string>
     <string name="EKATERINBURG">Екатеринбург</string>
@@ -68,18 +71,23 @@
     <string name="KARAGANDA">Караганда</string>
     <string name="KERKYRA">Керкира</string>
     <string name="KIEVBORISP">Киев (Бор-ль)</string>
+    <string name="KHMANSIYSK">Х-Мансийск</string>
     <string name="KLAGENFURT">Клагенфурт</string>
     <string name="KOSTANAY">Костанай</string>
     <string name="KRASNODAR">Краснодар</string>
     <string name="KUTAISI">Кутаиси</string>
     <string name="LARNACA">Ларнака</string>
     <string name="LONDON">Лондон</string>
+    <string name="LUXEMBOURG">Люксембург</string>
     <string name="MANCHESTER">Манчестер</string>
     <string name="MILAN">Милан</string>
     <string name="MOSCOWDME">Москва (Д-во)</string>
+    <string name="MOSCOWVKO">Москва (В-во)</string>
     <string name="MOSCOWSVOD">Москва (ШРМ/D)</string>
     <string name="MUNICH">Мюнхен</string>
     <string name="NICE">Ницца</string>
+    <string name="NIZHNEKAMSK">Нижнекамск</string>
+    <string name="NIZNOVGOROD">Н. Новгород</string>
     <string name="PALMAMALLORC">Пальма</string>
     <string name="PARIS">Париж</string>
     <string name="PAVLODAR">Павлодар</string>
@@ -89,6 +97,7 @@
     <string name="RIMINI">Римини</string>
     <string name="RODOS">Родос</string>
     <string name="ROME">Рим</string>
+    <string name="SALZBURG">Зальцбург</string>
     <string name="SAMARA">Самара</string>
     <string name="SHARMESHEIK">Шарм-эш-Шейх</string>
     <string name="SOCHI">Сочи</string>
@@ -109,4 +118,5 @@
     <string name="WARSAW">Варшава</string>
     <string name="YEREVAN">Ереван</string>
     <string name="ZAKINTHOS">Закинтос</string>
+    <string name="ZURICH">Цюрих</string>
 </resources>
