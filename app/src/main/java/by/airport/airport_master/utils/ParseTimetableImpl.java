@@ -51,7 +51,7 @@ public class ParseTimetableImpl<T extends FlightInfo> implements ParseTimetable<
     }
 
     private void setHeaders(List<T> infos) {
-        DateFormat format = new SimpleDateFormat("hh:mm");
+        DateFormat format = new SimpleDateFormat("HH:mm");
         List<Date> parsedTimeList = new ArrayList<>();
         Calendar calendar = Calendar.getInstance();
         List<Integer> positions = new ArrayList<>();

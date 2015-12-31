@@ -41,6 +41,7 @@
     <string name="BARCELONA">Barcelona</string>
     <string name="BARI">Bari</string>
     <string name="BATUMI">Batumi</string>
+    <string name="BEAOVAIS">Beaovais</string>
     <string name="BEIJING">Beijing</string>
     <string name="BEIRUT">Beirut</string>
     <string name="BELFAST">Belfast</string>
@@ -50,7 +51,9 @@
     <string name="BERLIN">Berlin</string>
     <string name="BODRUM">Bodrum</string>
     <string name="BOURGAS">Bourgas</string>
+    <string name="BRATISLAVA">Bratislava</string>
     <string name="BUDAPEST">Budapest</string>
+    <string name="CALAMOCHA">Calamocha</string>
     <string name="CATANIA">Catania</string>
     <string name="CHEREPOVETS">Cherepovets</string>
     <string name="COLOGNE">Cologne</string>
@@ -69,9 +72,12 @@
     <string name="IZMIR">Izmir</string>
     <string name="KALININGRAD">Kaliningrad</string>
     <string name="KARAGANDA">Karaganda</string>
+    <string name="KAZAN">Kazan</string>
     <string name="KERKYRA">Kerkyra</string>
+    <string name="KHARKOV">Kharkov</string>
     <string name="KHMANSIYSK">Kh-Mansiysk</string>
     <string name="KIEVBORISP">Kiev (BORISP)</string>
+    <string name="KIEVZHULYAN">Kiev (Zhulyan)</string>
     <string name="KLAGENFURT">Klagenfurt</string>
     <string name="KOSTANAY">Kostanay</string>
     <string name="KRASNODAR">Krasnodar</string>
@@ -88,6 +94,7 @@
     <string name="NICE">Nice</string>
     <string name="NIZHNEKAMSK">Nizhnekamsk</string>
     <string name="NIZNOVGOROD">N. Novgorod</string>
+    <string name="ODESSA">Odessa</string>
     <string name="PALMAMALLORC">Palma</string>
     <string name="PARIS">Paris</string>
     <string name="PAVLODAR">Pavlodar</string>
@@ -111,12 +118,15 @@
     <string name="TIRANA">Tirana</string>
     <string name="TIVAT">Tivat</string>
     <string name="TREVIZO">Trevizo</string>
+    <string name="UFA">Ufa</string>
     <string name="VARNA">Varna</string>
     <string name="VENICE">Venice</string>
     <string name="VIENNA">Vienna</string>
     <string name="VILNIUS">Vilnius</string>
     <string name="WARSAW">Warsaw</string>
     <string name="YEREVAN">Yerevan</string>
+    <string name="ZAGREB">Zagreb</string>
     <string name="ZAKINTHOS">Zakinthos</string>
+    <string name="ZAPOROZHYE">Zaporozhye</string>
     <string name="ZURICH">Zurich</string>
 </resources>

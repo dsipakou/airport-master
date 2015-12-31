@@ -73,9 +73,10 @@ public class DepartureFragment extends Fragment {
 
         protected void onPostExecute(FullFlightInfo<DepartureInfo> output) {
             progressBar.setVisibility(View.GONE);
+            sections.clear();
 
             mAdapter = new AirportListAdapter(mParentActivity, R.layout.airport_list_adapter, output.getFlightInfo());
-            for (int i = 0; i < output.getPositions().size() - 1; i ++) {
+            for (int i = 0; i < output.getPositions().size(); i ++) {
                 sections.add(new SimpleSectionedListAdapter.Section(output.getPositions().get(i), output.getHeaders().get(i)));
             }
             SimpleSectionedListAdapter simpleSectionedListAdapter;
