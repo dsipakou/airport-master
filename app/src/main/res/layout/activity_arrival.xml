@@ -1,139 +1,48 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/arrival_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true"
+        android:background="#0099CC">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary"
+            android:fitsSystemWindows="true">
+            <ImageView
+                app:layout_collapseMode="parallax"
+                android:id="@+id/cover_image"
+                android:src="@drawable/default_cover"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context="by.airport.airport_master.ArrivalActivity">
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <include
-            android:id="@+id/app_bar"
-            layout="@layout/app_bar" />
+        <include layout="@layout/details_inner"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#0099CC"
-            android:orientation="vertical"
-            android:paddingBottom="5dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp">
+    </android.support.v4.widget.NestedScrollView>
 
-            <TextView
-                android:id="@+id/arrival_city"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#FFF"
-                android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/arrival_code"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingTop="15dp">
-
-            <TableRow
-                android:paddingBottom="10dp">
-
-                <TextView
-                    android:id="@+id/arrival_company_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingRight="10dp"
-                    android:text="@string/airline_label" />
-
-                <TextView
-                    android:id="@+id/arrival_company"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3" />
-            </TableRow>
-
-            <TableRow
-                android:paddingBottom="10dp">
-
-                <TextView
-                    android:id="@+id/arrival_scheduled_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingRight="10dp"
-                    android:text="@string/scheduled_label" />
-
-                <TextView
-                    android:id="@+id/arrival_scheduled"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/arrival_actual_row"
-                android:paddingBottom="10dp">
-
-                <TextView
-                    android:id="@+id/arrival_actual_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingRight="10dp"
-                    android:text="@string/estimated_label" />
-
-                <TextView
-                    android:id="@+id/arrival_actual"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/arrival_status_row"
-                android:paddingBottom="10dp">
-                <TextView
-                    android:id="@+id/arrival_status_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingRight="10dp"
-                    android:text="@string/status_label" />
-
-                <TextView
-                    android:id="@+id/arrival_status"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/arrival_gate_row"
-                android:paddingBottom="10dp">
-                <TextView
-                    android:id="@+id/arrival_gate_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingRight="10dp"
-                    android:text="@string/gate_label" />
-
-                <TextView
-                    android:id="@+id/arrival_gate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3" />
-            </TableRow>
-
-        </TableLayout>
-    </LinearLayout>
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

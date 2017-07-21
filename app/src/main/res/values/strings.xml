@@ -37,6 +37,7 @@
     <string name="ASHGABAT">Ashgabat</string>
     <string name="ASTANA">Astana</string>
     <string name="ATHENS">Athens</string>
+    <string name="BAGHDAD">Baghdad</string>
     <string name="BAKU">Baku</string>
     <string name="BARCELONA">Barcelona</string>
     <string name="BARI">Bari</string>
@@ -75,9 +76,12 @@
     <string name="KAZAN">Kazan</string>
     <string name="KERKYRA">Kerkyra</string>
     <string name="KHARKOV">Kharkov</string>
+    <string name="KHARKIV">Kharkov</string>
     <string name="KHMANSIYSK">Kh-Mansiysk</string>
-    <string name="KIEVBORISP">Kiev (BORISP)</string>
+    <string name="KIEVBORISP">Kiev (Borisp)</string>
+    <string name="KYIVBORISP">Киев (Borisp)</string>
     <string name="KIEVZHULYAN">Kiev (Zhulyan)</string>
+    <string name="KYIVZHULYAN">Kiev (Zhulyan)</string>
     <string name="KLAGENFURT">Klagenfurt</string>
     <string name="KOSTANAY">Kostanay</string>
     <string name="KRASNODAR">Krasnodar</string>
@@ -85,11 +89,14 @@
     <string name="LARNACA">Larnaca</string>
     <string name="LONDON">London</string>
     <string name="LUXEMBOURG">Luxembourg</string>
+    <string name="LVIV">Lvov</string>
     <string name="MANCHESTER">Manchester</string>
     <string name="MILAN">Milan</string>
     <string name="MOSCOWDME">Moscow (DME)</string>
     <string name="MOSCOWVKO">Moscow (VKO)</string>
     <string name="MOSCOWSVOD">Moscow (SVO/D)</string>
+    <string name="MOSCOWSVOF">Moscow (SVO/F)</string>
+    <string name="MOSCOWZIA">Moscow (Zhukovsky)</string>
     <string name="MUNICH">Munich</string>
     <string name="NICE">Nice</string>
     <string name="NIZHNEKAMSK">Nizhnekamsk</string>
@@ -106,6 +113,7 @@
     <string name="ROME">Rome</string>
     <string name="SALZBURG">Salzburg</string>
     <string name="SAMARA">Samara</string>
+    <string name="SHANNON">Shannon</string>
     <string name="SHARMESHEIK">Sharm el-Sheikh</string>
     <string name="SOCHI">Sochi</string>
     <string name="STPETERSBURG">St.Petersburg</string>
@@ -127,6 +135,7 @@
     <string name="YEREVAN">Yerevan</string>
     <string name="ZAGREB">Zagreb</string>
     <string name="ZAKINTHOS">Zakinthos</string>
+    <string name="ZAPORIZHIA">Zaporozhye</string>
     <string name="ZAPOROZHYE">Zaporozhye</string>
     <string name="ZURICH">Zurich</string>
 </resources>

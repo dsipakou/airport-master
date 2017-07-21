@@ -22,12 +22,10 @@
         </activity>
         <activity
             android:name=".ArrivalActivity"
-            android:label="@string/title_activity_arrival"
             android:screenOrientation="locked">
         </activity>
         <activity
             android:name=".DepartureActivity"
-            android:label="@string/title_activity_departure"
             android:screenOrientation="locked">
         </activity>
         <activity

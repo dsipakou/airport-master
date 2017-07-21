@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TableRow;
 import android.widget.TextView;
 
@@ -21,11 +22,12 @@ public class ArrivalActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_arrival);
+        setContentView(R.layout.activity_departure);
 
-        toolbar = (Toolbar) findViewById(R.id.app_bar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_action_back);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,30 +35,40 @@ public class ArrivalActivity extends ActionBarActivity {
             }
         });
 
-        TextView city = (TextView) findViewById(R.id.arrival_city);
-        TextView code = (TextView) findViewById(R.id.arrival_code);
-        TextView company = (TextView) findViewById(R.id.arrival_company);
-        TextView timeScheduled = (TextView) findViewById(R.id.arrival_scheduled);
-        TableRow actualRow = (TableRow) findViewById(R.id.arrival_actual_row);
-        TextView timeActual = (TextView) findViewById(R.id.arrival_actual);
-        TableRow statusRow = (TableRow) findViewById(R.id.arrival_status_row);
-        TextView status = (TextView) findViewById(R.id.arrival_status);
-        TextView gate = (TextView) findViewById(R.id.arrival_gate);
+        ImageView cover = (ImageView) findViewById(R.id.cover_image);
+        TextView city = (TextView) findViewById(R.id.city);
+        TextView code = (TextView) findViewById(R.id.code);
+        TextView company = (TextView) findViewById(R.id.company);
+        TextView timeScheduled = (TextView) findViewById(R.id.scheduled);
+        TableRow actualRow = (TableRow) findViewById(R.id.actual_row);
+        TextView timeActual = (TextView) findViewById(R.id.actual);
+        TableRow statusRow = (TableRow) findViewById(R.id.status_row);
+        TextView status = (TextView) findViewById(R.id.status);
+        TextView gate = (TextView) findViewById(R.id.gate);
 
         actualRow.setVisibility(View.GONE);
         statusRow.setVisibility(View.GONE);
 
+        int imgRes = R.drawable.ic_landing;
+        city.setCompoundDrawablesWithIntrinsicBounds(0, 0, imgRes, 0);
+
         if (city != null) {
+            String format_city = StringUtils.replaceSpecialChars(Globals.arrivalInfo.getCity());
             int resourceId = getResources().getIdentifier(
-                    StringUtils.replaceSpecialChars(Globals.arrivalInfo.getCity()),
+                    format_city,
                     "string",
                     getPackageName());
             city.setText(Globals.arrivalInfo.getCity());
 
             if (resourceId > 0) {
                 city.setText(getResources().getString(resourceId));
-            } else {
-                city.setText(Globals.arrivalInfo.getCity());
+            }
+            int imageResourceID = getResources().getIdentifier(
+                    format_city.toLowerCase(),
+                    "drawable",
+                    getPackageName());
+            if (imageResourceID > 0) {
+                cover.setImageResource(imageResourceID);
             }
         }
 
