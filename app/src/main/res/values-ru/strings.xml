@@ -41,6 +41,7 @@
     <string name="BAKU">Баку</string>
     <string name="BARCELONA">Барселона</string>
     <string name="BARI">Бари</string>
+    <string name="BASRA">Басра</string>
     <string name="BATUMI">Батуми</string>
     <string name="BEAOVAIS">Бове</string>
     <string name="BEIJING">Пекин</string>
@@ -53,6 +54,7 @@
     <string name="BODRUM">Бодрум</string>
     <string name="BOURGAS">Бургас</string>
     <string name="BRATISLAVA">Братислава</string>
+    <string name="BRUSSELS">Брюссель</string>
     <string name="BUDAPEST">Будапешт</string>
     <string name="CALAMOCHA">Каламоча</string>
     <string name="CATANIA">Катанья</string>
@@ -96,12 +98,13 @@
     <string name="MOSCOWVKO">Москва (В-во)</string>
     <string name="MOSCOWSVOD">Москва (ШРМ/D)</string>
     <string name="MOSCOWSVOF">Москва (ШРМ/F)</string>
-    <string name="MOSCOWZIA">Москва (Жуковский)</string>
+    <string name="MOSCOWZIA">Москва (Жук-кий)</string>
     <string name="MUNICH">Мюнхен</string>
     <string name="NICE">Ницца</string>
     <string name="NIZHNEKAMSK">Нижнекамск</string>
     <string name="NIZNOVGOROD">Н. Новгород</string>
     <string name="ODESSA">Одесса</string>
+    <string name="PALANGA">Паланга</string>
     <string name="PALMAMALLORC">Пальма</string>
     <string name="PARIS">Париж</string>
     <string name="PAVLODAR">Павлодар</string>
@@ -126,12 +129,14 @@
     <string name="TIRANA">Тирана</string>
     <string name="TIVAT">Тиват</string>
     <string name="TREVIZO">Тревизо</string>
+    <string name="TRIESTE">Триест</string>
     <string name="UFA">Уфа</string>
     <string name="VARNA">Варна</string>
     <string name="VENICE">Венеция</string>
     <string name="VIENNA">Вена</string>
     <string name="VILNIUS">Вильнюс</string>
     <string name="WARSAW">Варшава</string>
+    <string name="YAROSLAVL">Ярославль</string>
     <string name="YEREVAN">Ереван</string>
     <string name="ZAGREB">Загреб</string>
     <string name="ZAKINTHOS">Закинтос</string>

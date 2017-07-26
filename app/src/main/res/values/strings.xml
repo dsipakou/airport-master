@@ -41,6 +41,7 @@
     <string name="BAKU">Baku</string>
     <string name="BARCELONA">Barcelona</string>
     <string name="BARI">Bari</string>
+    <string name="BASRA">Basra</string>
     <string name="BATUMI">Batumi</string>
     <string name="BEAOVAIS">Beaovais</string>
     <string name="BEIJING">Beijing</string>
@@ -53,6 +54,7 @@
     <string name="BODRUM">Bodrum</string>
     <string name="BOURGAS">Bourgas</string>
     <string name="BRATISLAVA">Bratislava</string>
+    <string name="BRUSSELS">Brussels</string>
     <string name="BUDAPEST">Budapest</string>
     <string name="CALAMOCHA">Calamocha</string>
     <string name="CATANIA">Catania</string>
@@ -102,6 +104,7 @@
     <string name="NIZHNEKAMSK">Nizhnekamsk</string>
     <string name="NIZNOVGOROD">N. Novgorod</string>
     <string name="ODESSA">Odessa</string>
+    <string name="PALANGA">Palanga</string>
     <string name="PALMAMALLORC">Palma</string>
     <string name="PARIS">Paris</string>
     <string name="PAVLODAR">Pavlodar</string>
@@ -126,12 +129,14 @@
     <string name="TIRANA">Tirana</string>
     <string name="TIVAT">Tivat</string>
     <string name="TREVIZO">Trevizo</string>
+    <string name="TRIESTE">Trieste</string>
     <string name="UFA">Ufa</string>
     <string name="VARNA">Varna</string>
     <string name="VENICE">Venice</string>
     <string name="VIENNA">Vienna</string>
     <string name="VILNIUS">Vilnius</string>
     <string name="WARSAW">Warsaw</string>
+    <string name="YAROSLAVL">Yaroslavl</string>
     <string name="YEREVAN">Yerevan</string>
     <string name="ZAGREB">Zagreb</string>
     <string name="ZAKINTHOS">Zakinthos</string>
