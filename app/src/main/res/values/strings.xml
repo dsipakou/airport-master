@@ -81,7 +81,7 @@
     <string name="KHARKIV">Kharkov</string>
     <string name="KHMANSIYSK">Kh-Mansiysk</string>
     <string name="KIEVBORISP">Kiev (Borisp)</string>
-    <string name="KYIVBORISP">Киев (Borisp)</string>
+    <string name="KYIVBORISP">Kiev (Borisp)</string>
     <string name="KIEVZHULYAN">Kiev (Zhulyan)</string>
     <string name="KYIVZHULYAN">Kiev (Zhulyan)</string>
     <string name="KLAGENFURT">Klagenfurt</string>
@@ -94,6 +94,7 @@
     <string name="LVIV">Lvov</string>
     <string name="MANCHESTER">Manchester</string>
     <string name="MILAN">Milan</string>
+    <string name="MONTICHIARI">Montichiari</string>
     <string name="MOSCOWDME">Moscow (DME)</string>
     <string name="MOSCOWVKO">Moscow (VKO)</string>
     <string name="MOSCOWSVOD">Moscow (SVO/D)</string>
@@ -133,6 +134,7 @@
     <string name="UFA">Ufa</string>
     <string name="VARNA">Varna</string>
     <string name="VENICE">Venice</string>
+    <string name="VERONA">Verona</string>
     <string name="VIENNA">Vienna</string>
     <string name="VILNIUS">Vilnius</string>
     <string name="WARSAW">Warsaw</string>

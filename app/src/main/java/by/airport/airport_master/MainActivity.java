@@ -6,6 +6,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -22,6 +23,7 @@ public class MainActivity extends ActionBarActivity {
     private Locale locale = null;
 
     private Toolbar toolbar;
+    private SwipeRefreshLayout mSwipeRefresh;
     private ViewPager mPager;
     private SlidingTabLayout mTabs;
 
@@ -35,9 +37,17 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = (Toolbar) findViewById(R.id.app_bar);
+        mSwipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swiperefresh);
         setSupportActionBar(toolbar);
         toolbar.refreshDrawableState();
         timetableCreate();
+        mSwipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh(){
+                timetableCreate();
+                mSwipeRefresh.setRefreshing(false);
+            }
+        });
     }
 
     @Override

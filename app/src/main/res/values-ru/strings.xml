@@ -94,6 +94,7 @@
     <string name="LVIV">Львов</string>
     <string name="MANCHESTER">Манчестер</string>
     <string name="MILAN">Милан</string>
+    <string name="MONTICHIARI">Монтикьяри</string>
     <string name="MOSCOWDME">Москва (Д-во)</string>
     <string name="MOSCOWVKO">Москва (В-во)</string>
     <string name="MOSCOWSVOD">Москва (ШРМ/D)</string>
@@ -133,6 +134,7 @@
     <string name="UFA">Уфа</string>
     <string name="VARNA">Варна</string>
     <string name="VENICE">Венеция</string>
+    <string name="VERONA">Верона</string>
     <string name="VIENNA">Вена</string>
     <string name="VILNIUS">Вильнюс</string>
     <string name="WARSAW">Варшава</string>

@@ -37,6 +37,12 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
             view = vi.inflate(R.layout.airport_list_adapter, null);
         }
 
+        if (position % 2 == 1) {
+            view.setBackgroundColor(Color.parseColor("#F2F2F2"));
+        } else {
+            view.setBackgroundColor(Color.parseColor("#FFFEEE"));
+        }
+
         FlightInfo info = getItem(position);
 
         if (info != null) {
