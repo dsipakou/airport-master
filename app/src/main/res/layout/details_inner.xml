@@ -1,14 +1,14 @@
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="16dp"
     app:cardUseCompatPadding="true">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0099CC"
+        android:background="@color/main_background"
         android:orientation="vertical"
         android:paddingBottom="5dp"
         android:paddingLeft="15dp"
@@ -18,9 +18,8 @@
             android:id="@+id/city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#FFF"
-            android:textSize="24sp"
-            android:drawablePadding="10dp"/>
+            android:drawablePadding="10dp"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/code"
@@ -29,7 +28,7 @@
 
     </LinearLayout>
 
-    <TableLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -37,96 +36,70 @@
         android:paddingRight="15dp"
         android:paddingTop="65dp">
 
-    <TableRow android:paddingBottom="10dp">
-
-        <TextView
-            android:id="@+id/company_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingRight="10dp"
-            android:text="@string/airline_label" />
-
         <TextView
             android:id="@+id/company"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="3" />
-    </TableRow>
+            android:textColor="@color/main_background"
+            android:visibility="gone" />
 
-    <TableRow android:paddingBottom="10dp">
-
-        <TextView
-            android:id="@+id/scheduled_title"
+        <ImageView
+            android:id="@+id/company_img"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingRight="10dp"
-            android:text="@string/scheduled_label" />
+            android:layout_height="50sp"
+            android:src="@drawable/belavia" />
+
 
         <TextView
             android:id="@+id/scheduled"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="3" />
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/actual_row"
-        android:paddingBottom="10dp">
-
-        <TextView
-            android:id="@+id/actual_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingRight="10dp"
-            android:text="@string/estimated_label" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="15:00"
+            android:textColor="@color/main_background"
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/actual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="3" />
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/status_row"
-        android:paddingBottom="10dp">
-
-        <TextView
-            android:id="@+id/status_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingRight="10dp"
-            android:text="@string/status_label" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50sp"
+            android:text="16:00"
+            android:textColor="@color/main_background"
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="3" />
-    </TableRow>
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="20sp"
+            android:text="Прибыл"
+            android:visibility="gone"
+            android:textSize="50sp" />
 
-    <TableRow
-        android:id="@+id/gate_row"
-        android:paddingBottom="10dp">
 
         <TextView
             android:id="@+id/gate_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingRight="10dp"
-            android:text="@string/gate_label" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="255sp"
+            android:text="@string/gate_label"
+            android:textColor="@color/main_background" />
 
         <TextView
             android:id="@+id/gate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="3" />
-    </TableRow>
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/main_background" />
 
-    </TableLayout>
+    </RelativeLayout>
 </android.support.v7.widget.CardView>

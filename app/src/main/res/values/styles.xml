@@ -4,6 +4,9 @@
     <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:textColor">@color/font_main</item>
+        <item name="android:textColorPrimary">@color/font_main</item>
+        <item name="android:textColorSecondary">@color/font_main</item>
         <!-- Customize your theme here. -->
     </style>
 

@@ -36,15 +36,12 @@ public class DepartureActivity extends AppCompatActivity {
         TextView city = (TextView) findViewById(R.id.city);
         TextView code = (TextView) findViewById(R.id.code);
         TextView company = (TextView) findViewById(R.id.company);
+        ImageView company_img = (ImageView) findViewById(R.id.company_img);
         TextView timeScheduled = (TextView) findViewById(R.id.scheduled);
-        TableRow actualRow = (TableRow) findViewById(R.id.actual_row);
         TextView timeActual = (TextView) findViewById(R.id.actual);
-        TableRow statusRow = (TableRow) findViewById(R.id.status_row);
         TextView status = (TextView) findViewById(R.id.status);
         TextView gate = (TextView) findViewById(R.id.gate);
 
-        actualRow.setVisibility(View.GONE);
-        statusRow.setVisibility(View.GONE);
 
         int imgRes = R.drawable.ic_takeoff;
         city.setCompoundDrawablesWithIntrinsicBounds(imgRes, 0, 0, 0);
@@ -74,7 +71,20 @@ public class DepartureActivity extends AppCompatActivity {
         }
 
         if (company != null) {
+            String format_company = StringUtils.replaceSpecialChars(Globals.departureInfo.getCompany());
             company.setText(Globals.departureInfo.getCompany());
+            int imageResourceID = getResources().getIdentifier(
+                    format_company.toLowerCase(),
+                    "drawable",
+                    getPackageName());
+            if (imageResourceID > 0) {
+                company_img.setVisibility(View.VISIBLE);
+                company.setVisibility(View.GONE);
+                company_img.setImageResource(imageResourceID);
+            } else {
+                company.setVisibility(View.VISIBLE);
+                company_img.setVisibility(View.GONE);
+            }
         }
 
         if (timeScheduled != null) {
@@ -82,13 +92,10 @@ public class DepartureActivity extends AppCompatActivity {
         }
 
         if (timeActual != null && Globals.departureInfo.getActualTime() != null) {
-            actualRow.setVisibility(View.VISIBLE);
             timeActual.setText(Globals.departureInfo.getActualTime());
         }
 
         if (status != null && Globals.departureInfo.getStatus() != null) {
-            statusRow.setVisibility(View.VISIBLE);
-
             Statuses tmpStatus = Globals.departureInfo.getStatus();
             int resourceId = getResources()
                     .getIdentifier(StringUtils

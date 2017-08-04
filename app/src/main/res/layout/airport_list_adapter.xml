@@ -1,114 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingLeft="10dp"
     android:paddingRight="10dp">
 
-    <TableLayout>
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5sp"
+        android:height="45sp"
+        android:textColor="@color/font_main"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="monospace" />
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45sp"
+        android:height="45sp"
+        android:textColor="@color/font_main"
+        android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/city"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:height="40sp"
-                android:textColor="#444444"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:typeface="monospace" />
+    <TextView
+        android:id="@+id/time_scheduled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5sp"
+        android:height="20sp"
+        android:textColor="@color/font_main"
+        android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/code"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:height="20sp"
-                android:gravity="end"
-                android:textSize="12sp" />
-        </TableRow>
-    </TableLayout>
+    <TextView
+        android:id="@+id/time_actual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="28sp"
+        android:height="20sp"
+        android:textColor="@color/font_main"
+        android:textSize="16sp" />
 
-    <TableLayout>
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="60sp"
+        android:height="20sp"
+        android:background="@drawable/back"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textSize="14sp" />
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/time_scheduled_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:height="25sp"
-                android:gravity="center_vertical"
-                android:text="@string/scheduled_label"
-                android:textColor="#222222"
-                android:textSize="12sp"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/time_scheduled"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_weight="1"
-                android:height="25sp"
-                android:gravity="center_vertical"
-                android:textColor="#222222"
-                android:textSize="16sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="5dp">
-
-            <TextView
-                android:id="@+id/time_actual_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:height="25sp"
-                android:gravity="center_vertical"
-                android:text="@string/estimated_label"
-                android:textColor="#222222"
-                android:textSize="12sp"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/time_actual"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_weight="1"
-                android:height="25sp"
-                android:gravity="center_vertical"
-                android:textColor="#222222"
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/status"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:height="25sp"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center_vertical"
-                    android:textSize="12sp"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:background="@drawable/back"/>
-            </LinearLayout>
-        </TableRow>
-    </TableLayout>
-</TableLayout>
+</RelativeLayout>

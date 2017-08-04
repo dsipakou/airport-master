@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,7 @@ public class DepartureFragment extends Fragment {
     private Activity mParentActivity = null;
     private AirportListAdapter mAdapter;
     private ArrayList<SimpleSectionedListAdapter.Section> sections = new ArrayList<SimpleSectionedListAdapter.Section>();
+    private SwipeRefreshLayout mSwipeRefresh;
 
     @Override
     public void onAttach(Activity activity) {
@@ -48,7 +50,15 @@ public class DepartureFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_departure, container, false);
         listView = (ListView) view.findViewById(R.id.departure_list_fragment);
         progressBar = (ProgressBar) view.findViewById(R.id.progress_departure_fragment);
+        mSwipeRefresh = (SwipeRefreshLayout) view.findViewById(R.id.swiperefresh_departure);
         updateData();
+        mSwipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh(){
+                updateData();
+                mSwipeRefresh.setRefreshing(false);
+            }
+        });
         return view;
     }
 

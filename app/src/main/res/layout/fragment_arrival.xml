@@ -1,21 +1,27 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="by.airport.airport_master.ArrivalFragment">
 
     <ProgressBar
         android:id="@+id/progress_arrival_fragment"
-        android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:indeterminate="true"
-        android:layout_centerInParent="true"/>
+        android:visibility="visible" />
 
-    <dev.dworks.libs.astickyheader.ui.PinnedSectionListView
-        android:id="@+id/arrival_list_fragment"
+    <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbarStyle="outsideOverlay">
-    </dev.dworks.libs.astickyheader.ui.PinnedSectionListView>
+        android:layout_height="match_parent"
+        android:id="@+id/swiperefresh_arrival" >
+
+        <dev.dworks.libs.astickyheader.ui.PinnedSectionListView
+            android:id="@+id/arrival_list_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarStyle="outsideOverlay"></dev.dworks.libs.astickyheader.ui.PinnedSectionListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 </FrameLayout>

@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/main_background"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -20,20 +21,15 @@
         <by.airport.airport_master.helpers.SlidingTabLayout
             android:id="@+id/main_tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
 
-        <android.support.v4.widget.SwipeRefreshLayout
-            android:id="@+id/swiperefresh"
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_pager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <android.support.v4.view.ViewPager
-                android:paddingRight="@dimen/view_pager_padding"
-                android:paddingLeft="@dimen/view_pager_padding"
-                android:id="@+id/main_pager"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-        </android.support.v4.widget.SwipeRefreshLayout>
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/view_pager_padding"
+            android:paddingRight="@dimen/view_pager_padding" />
 
     </LinearLayout>
 </RelativeLayout>

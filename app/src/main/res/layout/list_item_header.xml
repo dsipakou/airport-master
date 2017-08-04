@@ -10,10 +10,9 @@
         android:layout_height="22dp"
         android:layout_marginTop="0dp"
         android:paddingLeft="10dp"
-        android:singleLine="true"
         android:textAllCaps="true"
-        android:textColor="@android:color/white"
-        android:background="#666666"
+        android:textColor="@color/font_main"
+        android:background="#000000"
         android:textIsSelectable="false" />
 
 </FrameLayout>

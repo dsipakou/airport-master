@@ -2,6 +2,8 @@ package by.airport.airport_master.helpers;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import by.airport.airport_master.R;
 import by.airport.airport_master.entity.FlightInfo;
@@ -37,10 +40,10 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
             view = vi.inflate(R.layout.airport_list_adapter, null);
         }
 
-        if (position % 2 == 1) {
-            view.setBackgroundColor(Color.parseColor("#F2F2F2"));
+        if (position % 2 != 1) {
+            view.setBackgroundColor(Color.parseColor("#282B31"));
         } else {
-            view.setBackgroundColor(Color.parseColor("#FFFEEE"));
+            view.setBackgroundColor(Color.parseColor("#42454A"));
         }
 
         FlightInfo info = getItem(position);
@@ -49,13 +52,9 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
             TextView city = (TextView) view.findViewById(R.id.city);
             TextView code = (TextView) view.findViewById(R.id.code);
             TextView timeScheduled = (TextView) view.findViewById(R.id.time_scheduled);
-            TextView timeScheduledLabel = (TextView) view.findViewById(R.id.time_scheduled_label);
             TextView timeActual = (TextView) view.findViewById(R.id.time_actual);
-            TextView timeActualLabel = (TextView) view.findViewById(R.id.time_actual_label);
             TextView status = (TextView) view.findViewById(R.id.status);
-            timeActualLabel.setVisibility(View.GONE);
-            timeScheduledLabel.setVisibility(View.GONE);
-            timeActual.setText("");
+            timeActual.setVisibility(View.GONE);
             status.setVisibility(View.GONE);
 
             if (city != null) {
@@ -71,17 +70,23 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
             }
 
             if (code != null) {
-                code.setText("(" + info.getCode() + ")");
+                code.setText(info.getCode());
             }
 
             if (timeScheduled != null) {
-                timeScheduledLabel.setVisibility(View.VISIBLE);
                 timeScheduled.setText(info.getExpectedTime());
+                timeScheduled.setTypeface(null, Typeface.BOLD);
             }
 
             if (timeActual != null && info.getActualTime() != null) {
-                timeActualLabel.setVisibility(View.VISIBLE);
+                timeActual.setVisibility(View.VISIBLE);
                 timeActual.setText(info.getActualTime());
+                timeScheduled.setTypeface(null, Typeface.NORMAL);
+                timeScheduled.setTextSize(14);
+                timeScheduled.setPaintFlags(timeScheduled.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            } else {
+                timeScheduled.setPaintFlags(0);
+                timeScheduled.setTextSize(16);
             }
 
             if (status != null && info.getStatus() != null) {
