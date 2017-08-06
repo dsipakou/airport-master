@@ -1,5 +1,9 @@
 package by.airport.airport_master;
 
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import by.airport.airport_master.helpers.DetailsCard;
 import by.airport.airport_master.helpers.Statuses;
 import by.airport.airport_master.utils.Globals;
 import by.airport.airport_master.utils.StringUtils;
@@ -40,22 +45,24 @@ public class DepartureActivity extends AppCompatActivity {
         TextView timeScheduled = (TextView) findViewById(R.id.scheduled);
         TextView timeActual = (TextView) findViewById(R.id.actual);
         TextView status = (TextView) findViewById(R.id.status);
-        TextView gate = (TextView) findViewById(R.id.gate);
+        TextView gate = (TextView) findViewById(R.id.gate_title);
 
+        DetailsCard detailsCard = new DetailsCard(Globals.departureInfo);
 
         int imgRes = R.drawable.ic_takeoff;
         city.setCompoundDrawablesWithIntrinsicBounds(imgRes, 0, 0, 0);
 
         if (city != null) {
-            String format_city = StringUtils.replaceSpecialChars(Globals.departureInfo.getCity());
+            String format_city = StringUtils.replaceSpecialChars(detailsCard.getCity());
             int resourceId = getResources().getIdentifier(
                     format_city,
                     "string",
                     getPackageName());
-            city.setText(Globals.departureInfo.getCity());
 
             if (resourceId > 0) {
                 city.setText(getResources().getString(resourceId));
+            } else {
+                city.setText(detailsCard.getCity());
             }
             int imageResourceID = getResources().getIdentifier(
                     format_city.toLowerCase(),
@@ -67,12 +74,12 @@ public class DepartureActivity extends AppCompatActivity {
         }
 
         if (code != null) {
-            code.setText(Globals.departureInfo.getCode());
+            code.setText(detailsCard.getCode());
         }
 
         if (company != null) {
-            String format_company = StringUtils.replaceSpecialChars(Globals.departureInfo.getCompany());
-            company.setText(Globals.departureInfo.getCompany());
+            String format_company = StringUtils.replaceSpecialChars(detailsCard.getCompany());
+            company.setText(detailsCard.getCompany());
             int imageResourceID = getResources().getIdentifier(
                     format_company.toLowerCase(),
                     "drawable",
@@ -88,15 +95,23 @@ public class DepartureActivity extends AppCompatActivity {
         }
 
         if (timeScheduled != null) {
-            timeScheduled.setText(Globals.departureInfo.getExpectedTime());
+            timeScheduled.setText(detailsCard.getExpectedTime());
+            timeScheduled.setTypeface(null, Typeface.BOLD);
+            timeScheduled.setPaintFlags(0);
+            timeScheduled.setTextSize(40);
         }
 
-        if (timeActual != null && Globals.departureInfo.getActualTime() != null) {
-            timeActual.setText(Globals.departureInfo.getActualTime());
+        if (timeActual != null && detailsCard.getActualTime() != null) {
+            timeActual.setVisibility(View.VISIBLE);
+            timeActual.setText(detailsCard.getActualTime());
+            timeScheduled.setTypeface(null, Typeface.NORMAL);
+            timeScheduled.setTextSize(35);
+            timeScheduled.setPaintFlags(timeScheduled.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         }
 
-        if (status != null && Globals.departureInfo.getStatus() != null) {
-            Statuses tmpStatus = Globals.departureInfo.getStatus();
+        if (status != null && detailsCard.getStatus() != null) {
+            Statuses tmpStatus = detailsCard.getStatus();
+            status.setVisibility(View.VISIBLE);
             int resourceId = getResources()
                     .getIdentifier(StringUtils
                                     .replaceSpecialChars(tmpStatus.name()),
@@ -106,10 +121,34 @@ public class DepartureActivity extends AppCompatActivity {
             if (resourceId > 0) {
                 status.setText(getResources().getString(resourceId));
             }
+            GradientDrawable bgShape = (GradientDrawable) status.getBackground();
+
+            switch (tmpStatus) {
+                case LANDED:
+                    bgShape.setColor(Color.parseColor("#0AC20A"));
+                    status.setTextColor(Color.WHITE);
+                    break;
+                case DELAYED:
+                    bgShape.setColor(Color.RED);
+                    status.setTextColor(Color.WHITE);
+                    break;
+                case BOARDING:
+                    bgShape.setColor(Color.parseColor("#0AC20A"));
+                    status.setTextColor(Color.WHITE);
+                    break;
+                case CHECKIN:
+                    bgShape.setColor(Color.YELLOW);
+                    status.setTextColor(Color.parseColor("#4E5200"));
+                    break;
+                default:
+                    status.setVisibility(View.GONE);
+                    break;
+            }
         }
 
-        if (gate != null && Globals.departureInfo.getGate() != null) {
-            gate.setText(Globals.departureInfo.getGate());
+        if (gate != null && detailsCard.getGate() != null) {
+            gate.setVisibility(View.VISIBLE);
+            gate.setText(gate.getText() + "  " + detailsCard.getGate());
         }
     }
 }
