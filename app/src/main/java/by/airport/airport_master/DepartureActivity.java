@@ -81,7 +81,7 @@ public class DepartureActivity extends AppCompatActivity {
             String format_company = StringUtils.replaceSpecialChars(detailsCard.getCompany());
             company.setText(detailsCard.getCompany());
             int imageResourceID = getResources().getIdentifier(
-                    format_company.toLowerCase(),
+                    format_company.toLowerCase().replace("\\s", ""),
                     "drawable",
                     getPackageName());
             if (imageResourceID > 0) {
@@ -96,17 +96,14 @@ public class DepartureActivity extends AppCompatActivity {
 
         if (timeScheduled != null) {
             timeScheduled.setText(detailsCard.getExpectedTime());
-            timeScheduled.setTypeface(null, Typeface.BOLD);
-            timeScheduled.setPaintFlags(0);
-            timeScheduled.setTextSize(40);
         }
 
-        if (timeActual != null && detailsCard.getActualTime() != null) {
-            timeActual.setVisibility(View.VISIBLE);
-            timeActual.setText(detailsCard.getActualTime());
-            timeScheduled.setTypeface(null, Typeface.NORMAL);
-            timeScheduled.setTextSize(35);
-            timeScheduled.setPaintFlags(timeScheduled.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        if (timeActual != null) {
+            if (detailsCard.getActualTime() == null) {
+                timeActual.setText("-");
+            } else {
+                timeActual.setText(detailsCard.getActualTime());
+            }
         }
 
         if (status != null && detailsCard.getStatus() != null) {

@@ -17,17 +17,20 @@ import by.airport.airport_master.utils.Globals;
 import by.airport.airport_master.utils.StringUtils;
 
 /*
-* TURKMENISTAN AIRLINES
-* TURKISH AIRLINES
-* UTAIR AVIATION
-* LUFTHANSA
-* UKRAINE INTERNATIONAL AIRLINES
-* AUSTRIAN AIRLINES
-* VUELING
-* MOTOR SICH
-* LOT
-* AIR BALTIC
-* AIR CHINA
+* + BELAVIA
+* + AEROFLOT
+* + TURKMENISTAN AIRLINES
+* + TURKISH AIRLINES
+* + UTAIR AVIATION
+* + LUFTHANSA
+* + UKRAINE INTERNATIONAL AIRLINES
+* + AUSTRIAN AIRLINES
+* + VUELING
+* + MOTOR SICH
+* + LOT
+* + AIR BALTIC
+* + AIR CHINA
+* IRAQI AIRWAYS
 *
 * */
 
@@ -96,7 +99,7 @@ public class ArrivalActivity extends AppCompatActivity {
             String format_company = StringUtils.replaceSpecialChars(detailsCard.getCompany());
             company.setText(detailsCard.getCompany());
             int imageResourceID = getResources().getIdentifier(
-                    format_company.toLowerCase(),
+                    format_company.toLowerCase().replace("\\s", ""),
                     "drawable",
                     getPackageName());
             if (imageResourceID > 0) {
@@ -111,17 +114,14 @@ public class ArrivalActivity extends AppCompatActivity {
 
         if (timeScheduled != null) {
             timeScheduled.setText(detailsCard.getExpectedTime());
-            timeScheduled.setTypeface(null, Typeface.BOLD);
-            timeScheduled.setPaintFlags(0);
-            timeScheduled.setTextSize(40);
         }
 
-        if (timeActual != null && detailsCard.getActualTime() != null) {
-            timeActual.setVisibility(View.VISIBLE);
-            timeActual.setText(detailsCard.getActualTime());
-            timeScheduled.setTypeface(null, Typeface.NORMAL);
-            timeScheduled.setTextSize(35);
-            timeScheduled.setPaintFlags(timeScheduled.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        if (timeActual != null) {
+            if (detailsCard.getActualTime() == null) {
+                timeActual.setText("-");
+            } else {
+                timeActual.setText(detailsCard.getActualTime());
+            }
         }
 
         if (status != null && detailsCard.getStatus() != null) {
