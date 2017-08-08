@@ -42,13 +42,12 @@
             <TextView
                 android:id="@+id/company"
                 android:layout_width="wrap_content"
-                android:layout_height="40sp"
+                android:layout_height="50sp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10sp"
                 android:textAlignment="center"
                 android:textColor="@color/main_background"
-                android:textSize="24sp"
-                android:visibility="gone" />
+                android:textSize="24sp" />
 
             <ImageView
                 android:id="@+id/company_img"
@@ -61,7 +60,7 @@
                 android:id="@+id/gate_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/company_img"
+                android:layout_below="@+id/company"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20sp"
                 android:text="@string/gate_label"

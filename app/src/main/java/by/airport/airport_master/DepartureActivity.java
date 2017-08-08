@@ -79,17 +79,17 @@ public class DepartureActivity extends AppCompatActivity {
 
         if (company != null) {
             String format_company = StringUtils.replaceSpecialChars(detailsCard.getCompany());
-            company.setText(detailsCard.getCompany());
             int imageResourceID = getResources().getIdentifier(
                     format_company.toLowerCase().replace("\\s", ""),
                     "drawable",
                     getPackageName());
             if (imageResourceID > 0) {
                 company_img.setVisibility(View.VISIBLE);
-                company.setVisibility(View.GONE);
+                company.setText("");
                 company_img.setImageResource(imageResourceID);
             } else {
                 company.setVisibility(View.VISIBLE);
+                company.setText(detailsCard.getCompany());
                 company_img.setVisibility(View.GONE);
             }
         }

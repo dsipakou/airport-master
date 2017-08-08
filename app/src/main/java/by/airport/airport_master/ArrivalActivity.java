@@ -17,21 +17,24 @@ import by.airport.airport_master.utils.Globals;
 import by.airport.airport_master.utils.StringUtils;
 
 /*
-* + BELAVIA
 * + AEROFLOT
+* + AIR BALTIC
+* + AIR CHINA
+* + Arkia Israeli Airlines
+* + AUSTRIAN AIRLINES
+* + Azerbaijan Airlines
+* + BELAVIA
+* + ETIHAD AIRWAYS
+* + IRAQI AIRWAYS
+* + LOT
+* + LUFTHANSA
+* + MOTOR SICH
 * + TURKMENISTAN AIRLINES
 * + TURKISH AIRLINES
 * + UTAIR AVIATION
-* + LUFTHANSA
 * + UKRAINE INTERNATIONAL AIRLINES
-* + AUSTRIAN AIRLINES
+* Uzbekistan Airways
 * + VUELING
-* + MOTOR SICH
-* + LOT
-* + AIR BALTIC
-* + AIR CHINA
-* IRAQI AIRWAYS
-*
 * */
 
 
@@ -97,17 +100,18 @@ public class ArrivalActivity extends AppCompatActivity {
 
         if (company != null) {
             String format_company = StringUtils.replaceSpecialChars(detailsCard.getCompany());
-            company.setText(detailsCard.getCompany());
+
             int imageResourceID = getResources().getIdentifier(
                     format_company.toLowerCase().replace("\\s", ""),
                     "drawable",
                     getPackageName());
             if (imageResourceID > 0) {
                 company_img.setVisibility(View.VISIBLE);
-                company.setVisibility(View.GONE);
+                company.setText("");
                 company_img.setImageResource(imageResourceID);
             } else {
                 company.setVisibility(View.VISIBLE);
+                company.setText(detailsCard.getCompany());
                 company_img.setVisibility(View.GONE);
             }
         }
