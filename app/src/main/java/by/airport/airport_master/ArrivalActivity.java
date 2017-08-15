@@ -33,7 +33,7 @@ import by.airport.airport_master.utils.StringUtils;
 * + TURKISH AIRLINES
 * + UTAIR AVIATION
 * + UKRAINE INTERNATIONAL AIRLINES
-* Uzbekistan Airways
+* + Uzbekistan Airways
 * + VUELING
 * */
 
