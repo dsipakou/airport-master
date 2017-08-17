@@ -1,13 +1,13 @@
-package by.airport.airport_master.helpers;
+package by.airport.airport_main.helpers;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import by.airport.airport_master.ArrivalFragment;
-import by.airport.airport_master.DepartureFragment;
-import by.airport.airport_master.R;
+import by.airport.airport_main.ArrivalFragment;
+import by.airport.airport_main.DepartureFragment;
+import by.airport.airport_main.R;
 
 public class AirportViewPagerAdapter extends FragmentPagerAdapter {
 

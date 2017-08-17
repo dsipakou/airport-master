@@ -1,16 +1,14 @@
-package by.airport.airport_master;
+package by.airport.airport_main;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 
 import java.util.Locale;
 
-import by.airport.airport_master.utils.Localization;
+import by.airport.airport_main.utils.Localization;
 
 public class AirportPreferenceActivity extends PreferenceActivity {
     @Override

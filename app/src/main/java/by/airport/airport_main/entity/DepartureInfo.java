@@ -1,6 +1,6 @@
-package by.airport.airport_master.entity;
+package by.airport.airport_main.entity;
 
-import by.airport.airport_master.helpers.Statuses;
+import by.airport.airport_main.helpers.Statuses;
 
 /**
  * Created by dzianis.sipakou on 5/20/2015.

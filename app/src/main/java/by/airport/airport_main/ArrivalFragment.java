@@ -1,4 +1,4 @@
-package by.airport.airport_master;
+package by.airport.airport_main;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,19 +15,19 @@ import android.widget.ProgressBar;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 
-import by.airport.airport_master.entity.DepartureInfo;
-import by.airport.airport_master.entity.FullFlightInfo;
-import by.airport.airport_master.helpers.AirportListAdapter;
-import by.airport.airport_master.utils.Globals;
-import by.airport.airport_master.utils.ParseTimetableImpl;
+import by.airport.airport_main.entity.ArrivalInfo;
+import by.airport.airport_main.entity.FullFlightInfo;
+import by.airport.airport_main.helpers.AirportListAdapter;
+import by.airport.airport_main.utils.Globals;
+import by.airport.airport_main.utils.ParseTimetableImpl;
 import dev.dworks.libs.astickyheader.SimpleSectionedListAdapter;
 
-public class DepartureFragment extends Fragment {
 
-    private ListView listView;
+public class ArrivalFragment extends Fragment {
+
     private ProgressBar progressBar;
+    private ListView listView;
     private Activity mParentActivity = null;
     private AirportListAdapter mAdapter;
     private ArrayList<SimpleSectionedListAdapter.Section> sections = new ArrayList<SimpleSectionedListAdapter.Section>();
@@ -47,10 +47,10 @@ public class DepartureFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_departure, container, false);
-        listView = (ListView) view.findViewById(R.id.departure_list_fragment);
-        progressBar = (ProgressBar) view.findViewById(R.id.progress_departure_fragment);
-        mSwipeRefresh = (SwipeRefreshLayout) view.findViewById(R.id.swiperefresh_departure);
+        View view = inflater.inflate(R.layout.fragment_arrival, container, false);
+        listView = (ListView) view.findViewById(R.id.arrival_list_fragment);
+        progressBar = (ProgressBar) view.findViewById(R.id.progress_arrival_fragment);
+        mSwipeRefresh = (SwipeRefreshLayout) view.findViewById(R.id.swiperefresh_arrival);
         updateData();
         mSwipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -64,27 +64,27 @@ public class DepartureFragment extends Fragment {
 
     private void updateData() {
         progressBar.setVisibility(View.VISIBLE);
-        new ParseDeparture().execute(Globals.DEPARTURE_URL);
+        new ParseArrival().execute(Globals.ARRIVAL_URL);
     }
 
-    private class ParseDeparture extends AsyncTask<String, Void, FullFlightInfo<DepartureInfo>> {
-        ParseTimetableImpl<DepartureInfo> parsedTimetable;
+    private class ParseArrival extends AsyncTask<String, Void, FullFlightInfo<ArrivalInfo>> {
+        ParseTimetableImpl<ArrivalInfo> parsedTimetable;
 
-        protected FullFlightInfo<DepartureInfo> doInBackground(String... arg) {
+        protected FullFlightInfo<ArrivalInfo> doInBackground(String... arg) {
             parsedTimetable = new ParseTimetableImpl<>();
-            FullFlightInfo<DepartureInfo> output = new FullFlightInfo<>();
+
+            FullFlightInfo<ArrivalInfo> output = new FullFlightInfo<>();
             try {
-                output = parsedTimetable.getDetailsList(new URL(arg[0]), DepartureInfo.class);
+                output = parsedTimetable.getDetailsList(new URL(arg[0]), ArrivalInfo.class);
             } catch (Exception e) {
                 e.printStackTrace();
             }
             return output;
         }
 
-        protected void onPostExecute(FullFlightInfo<DepartureInfo> output) {
+        protected void onPostExecute(FullFlightInfo<ArrivalInfo> output) {
             progressBar.setVisibility(View.GONE);
             sections.clear();
-
             mAdapter = new AirportListAdapter(mParentActivity, R.layout.airport_list_adapter, output.getFlightInfo());
             for (int i = 0; i < output.getPositions().size(); i ++) {
                 sections.add(new SimpleSectionedListAdapter.Section(output.getPositions().get(i), output.getHeaders().get(i)));
@@ -93,15 +93,15 @@ public class DepartureFragment extends Fragment {
             simpleSectionedListAdapter = new SimpleSectionedListAdapter(mParentActivity, mAdapter, R.layout.list_item_header, R.id.header);
             simpleSectionedListAdapter.setSections(sections.toArray(new SimpleSectionedListAdapter.Section[0]));
             listView.setAdapter(simpleSectionedListAdapter);
-            listView.setOnItemClickListener(onDepartureClickListener);
+            listView.setOnItemClickListener(onArrivalClickListener);
         }
     }
 
-    private AdapterView.OnItemClickListener onDepartureClickListener = new AdapterView.OnItemClickListener() {
+    private AdapterView.OnItemClickListener onArrivalClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Globals.departureInfo = (DepartureInfo) parent.getAdapter().getItem(position);
-            Intent intent = new Intent(view.getContext(), DepartureActivity.class);
+            Globals.arrivalInfo = (ArrivalInfo) parent.getAdapter().getItem(position);
+            Intent intent = new Intent(view.getContext(), ArrivalActivity.class);
             startActivity(intent);
         }
     };

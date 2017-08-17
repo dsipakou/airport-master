@@ -1,4 +1,4 @@
-package by.airport.airport_master.entity;
+package by.airport.airport_main.entity;
 
 import java.util.List;
 

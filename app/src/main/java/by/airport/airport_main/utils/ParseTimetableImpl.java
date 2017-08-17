@@ -1,6 +1,4 @@
-package by.airport.airport_master.utils;
-
-import android.support.v4.app.INotificationSideChannel;
+package by.airport.airport_main.utils;
 
 import org.htmlcleaner.TagNode;
 
@@ -12,8 +10,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import by.airport.airport_master.entity.FlightInfo;
-import by.airport.airport_master.entity.FullFlightInfo;
+import by.airport.airport_main.entity.FlightInfo;
+import by.airport.airport_main.entity.FullFlightInfo;
 
 /**
  * Created by dzianis.sipakou on 5/21/2015.

@@ -1,24 +1,43 @@
-package by.airport.airport_master;
+package by.airport.airport_main;
 
 import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TableRow;
 import android.widget.TextView;
 
-import by.airport.airport_master.helpers.DetailsCard;
-import by.airport.airport_master.helpers.Statuses;
-import by.airport.airport_master.utils.Globals;
-import by.airport.airport_master.utils.StringUtils;
+import by.airport.airport_main.helpers.DetailsCard;
+import by.airport.airport_main.helpers.Statuses;
+import by.airport.airport_main.utils.Globals;
+import by.airport.airport_main.utils.StringUtils;
 
-public class DepartureActivity extends AppCompatActivity {
+/*
+* + AEROFLOT
+* + AIR BALTIC
+* + AIR CHINA
+* + Arkia Israeli Airlines
+* + AUSTRIAN AIRLINES
+* + Azerbaijan Airlines
+* + BELAVIA
+* + ETIHAD AIRWAYS
+* + IRAQI AIRWAYS
+* + LOT
+* + LUFTHANSA
+* + MOTOR SICH
+* + TURKMENISTAN AIRLINES
+* + TURKISH AIRLINES
+* + UTAIR AVIATION
+* + UKRAINE INTERNATIONAL AIRLINES
+* + Uzbekistan Airways
+* + VUELING
+* */
+
+
+public class ArrivalActivity extends AppCompatActivity {
+
     private Toolbar toolbar;
 
     @Override
@@ -47,10 +66,10 @@ public class DepartureActivity extends AppCompatActivity {
         TextView status = (TextView) findViewById(R.id.status);
         TextView gate = (TextView) findViewById(R.id.gate_title);
 
-        DetailsCard detailsCard = new DetailsCard(Globals.departureInfo);
+        DetailsCard detailsCard = new DetailsCard(Globals.arrivalInfo);
 
-        int imgRes = R.drawable.ic_takeoff;
-        city.setCompoundDrawablesWithIntrinsicBounds(imgRes, 0, 0, 0);
+        int imgRes = R.drawable.ic_landing;
+        city.setCompoundDrawablesWithIntrinsicBounds(0, 0, imgRes, 0);
 
         if (city != null) {
             String format_city = StringUtils.replaceSpecialChars(detailsCard.getCity());
@@ -79,6 +98,7 @@ public class DepartureActivity extends AppCompatActivity {
 
         if (company != null) {
             String format_company = StringUtils.replaceSpecialChars(detailsCard.getCompany());
+
             int imageResourceID = getResources().getIdentifier(
                     format_company.toLowerCase().replace("\\s", ""),
                     "drawable",

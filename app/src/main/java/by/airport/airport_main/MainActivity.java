@@ -1,4 +1,4 @@
-package by.airport.airport_master;
+package by.airport.airport_main;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -6,7 +6,6 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -14,8 +13,8 @@ import android.view.MenuItem;
 
 import java.util.Locale;
 
-import by.airport.airport_master.helpers.AirportViewPagerAdapter;
-import by.airport.airport_master.helpers.SlidingTabLayout;
+import by.airport.airport_main.helpers.AirportViewPagerAdapter;
+import by.airport.airport_main.helpers.SlidingTabLayout;
 
 
 public class MainActivity extends ActionBarActivity {

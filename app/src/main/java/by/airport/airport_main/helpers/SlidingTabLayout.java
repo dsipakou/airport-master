@@ -1,4 +1,4 @@
-package by.airport.airport_master.helpers;
+package by.airport.airport_main.helpers;
 
 /**
  * Copyright 2014 Google Inc. All rights reserved.

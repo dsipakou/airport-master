@@ -1,7 +1,7 @@
-package by.airport.airport_master.utils;
+package by.airport.airport_main.utils;
 
-import by.airport.airport_master.entity.ArrivalInfo;
-import by.airport.airport_master.entity.DepartureInfo;
+import by.airport.airport_main.entity.ArrivalInfo;
+import by.airport.airport_main.entity.DepartureInfo;
 
 /**
  * Created by dzianis.sipakou on 5/25/2015.

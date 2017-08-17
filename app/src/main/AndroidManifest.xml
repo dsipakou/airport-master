@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="by.airport.airport_master"
+    package="by.airport.airport_main"
     android:versionCode="2"
     android:versionName="1.0.1">
 
@@ -8,11 +8,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_airport_logo"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="by.airport.airport_main.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="locked">
             <intent-filter>
@@ -21,15 +21,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ArrivalActivity"
+            android:name="by.airport.airport_main.ArrivalActivity"
             android:screenOrientation="locked">
         </activity>
         <activity
-            android:name=".DepartureActivity"
+            android:name="by.airport.airport_main.DepartureActivity"
             android:screenOrientation="locked">
         </activity>
         <activity
-            android:name=".AirportPreferenceActivity"
+            android:name="by.airport.airport_main.AirportPreferenceActivity"
             android:label="@string/settings_preferences"
             android:screenOrientation="locked">
         </activity>

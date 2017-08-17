@@ -1,4 +1,4 @@
-package by.airport.airport_master.helpers;
+package by.airport.airport_main.helpers;
 
 public enum Statuses {
     LANDED,

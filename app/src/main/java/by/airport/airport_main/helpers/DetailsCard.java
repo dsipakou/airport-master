@@ -1,9 +1,8 @@
-package by.airport.airport_master.helpers;
+package by.airport.airport_main.helpers;
 
 import android.support.v7.app.AppCompatActivity;
 
-import by.airport.airport_master.entity.FlightInfo;
-import by.airport.airport_master.utils.StringUtils;
+import by.airport.airport_main.entity.FlightInfo;
 
 public class DetailsCard extends AppCompatActivity {
 

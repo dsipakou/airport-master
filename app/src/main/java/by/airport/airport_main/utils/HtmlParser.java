@@ -1,4 +1,4 @@
-package by.airport.airport_master.utils;
+package by.airport.airport_main.utils;
 
 import org.htmlcleaner.HtmlCleaner;
 import org.htmlcleaner.TagNode;

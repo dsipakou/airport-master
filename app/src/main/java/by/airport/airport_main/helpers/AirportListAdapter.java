@@ -1,4 +1,4 @@
-package by.airport.airport_master.helpers;
+package by.airport.airport_main.helpers;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -12,11 +12,10 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.List;
-import java.util.logging.Logger;
 
-import by.airport.airport_master.R;
-import by.airport.airport_master.entity.FlightInfo;
-import by.airport.airport_master.utils.StringUtils;
+import by.airport.airport_main.R;
+import by.airport.airport_main.entity.FlightInfo;
+import by.airport.airport_main.utils.StringUtils;
 
 public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
 

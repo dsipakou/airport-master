@@ -1,9 +1,8 @@
-package by.airport.airport_master.utils;
+package by.airport.airport_main.utils;
 
 import java.net.URL;
-import java.util.List;
 
-import by.airport.airport_master.entity.FullFlightInfo;
+import by.airport.airport_main.entity.FullFlightInfo;
 
 /**
  * Created by dzianis.sipakou on 5/20/2015.

@@ -1,4 +1,4 @@
-package by.airport.airport_master;
+package by.airport.airport_main;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
