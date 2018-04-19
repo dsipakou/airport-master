@@ -18,7 +18,7 @@
             android:id="@+id/app_bar"
             layout="@layout/app_bar" />
 
-        <by.airport.airport_main.helpers.SlidingTabLayout
+        <by.airport.airport_timetable.helpers.SlidingTabLayout
             android:id="@+id/main_tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

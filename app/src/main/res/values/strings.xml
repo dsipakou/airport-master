@@ -88,6 +88,7 @@
     <string name="KLAGENFURT">Klagenfurt</string>
     <string name="KOSTANAY">Kostanay</string>
     <string name="KRASNODAR">Krasnodar</string>
+    <string name="KRIVOYROG">Krivoy Rog</string>
     <string name="KUTAISI">Kutaisi</string>
     <string name="LARNACA">Larnaca</string>
     <string name="LONDON">London</string>
@@ -106,6 +107,7 @@
     <string name="NIZHNEKAMSK">Nizhnekamsk</string>
     <string name="NIZNOVGOROD">N. Novgorod</string>
     <string name="ODESSA">Odessa</string>
+    <string name="OSLO">Oslo</string>
     <string name="PALANGA">Palanga</string>
     <string name="PALMAMALLORC">Palma</string>
     <string name="PARIS">Paris</string>

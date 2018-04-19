@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="by.airport.airport_main.ArrivalFragment">
+    tools:context="by.airport.airport_timetable.ArrivalFragment">
 
     <ProgressBar
         android:id="@+id/progress_arrival_fragment"

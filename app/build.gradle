@@ -5,7 +5,7 @@ android {
     buildToolsVersion '25.0.0'
 
     defaultConfig {
-        applicationId "by.airport.airport_master"
+        applicationId "by.airport.airport_timetable"
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 7
