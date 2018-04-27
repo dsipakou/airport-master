@@ -53,7 +53,7 @@ public class DepartureFragment extends Fragment {
         updateData();
         mSwipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
-            public void onRefresh(){
+            public void onRefresh() {
                 updateData();
                 mSwipeRefresh.setRefreshing(false);
             }
@@ -85,7 +85,7 @@ public class DepartureFragment extends Fragment {
             sections.clear();
 
             mAdapter = new AirportListAdapter(mParentActivity, R.layout.airport_list_adapter, output.getFlightInfo());
-            for (int i = 0; i < output.getPositions().size(); i ++) {
+            for (int i = 0; i < output.getPositions().size(); i++) {
                 sections.add(new SimpleSectionedListAdapter.Section(output.getPositions().get(i), output.getHeaders().get(i)));
             }
             SimpleSectionedListAdapter simpleSectionedListAdapter;
@@ -99,9 +99,13 @@ public class DepartureFragment extends Fragment {
     private AdapterView.OnItemClickListener onDepartureClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Globals.departureInfo = (DepartureInfo) parent.getAdapter().getItem(position);
-            Intent intent = new Intent(view.getContext(), DepartureActivity.class);
-            startActivity(intent);
+            try {
+                Globals.departureInfo = (DepartureInfo) parent.getAdapter().getItem(position);
+                Intent intent = new Intent(view.getContext(), DepartureActivity.class);
+                startActivity(intent);
+            } catch (ClassCastException ex) {
+
+            }
         }
     };
 }

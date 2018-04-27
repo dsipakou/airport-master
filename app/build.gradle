@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         applicationId "by.airport.airport_timetable"
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 7
-        versionName "2.0.0"
+        versionCode 8
+        versionName "2.0.1"
     }
     buildTypes {
         release {
@@ -20,11 +20,11 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile files('libs/htmlcleaner-2.11.jar')
-    compile "com.android.support:appcompat-v7:25.3.1"
-    compile "com.android.support:cardview-v7:25.3.1"
-    compile "com.android.support:design:25.3.1"
-    compile "com.android.support:support-v4:25.3.1"
-    compile 'dev.dworks.libs:astickyheader:0.1.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation files('libs/htmlcleaner-2.11.jar')
+    implementation "com.android.support:appcompat-v7:25.4.0"
+    implementation "com.android.support:cardview-v7:25.4.0"
+    implementation "com.android.support:design:25.4.0"
+    implementation "com.android.support:support-v4:25.4.0"
+    implementation 'dev.dworks.libs:astickyheader:0.1.0'
 }
