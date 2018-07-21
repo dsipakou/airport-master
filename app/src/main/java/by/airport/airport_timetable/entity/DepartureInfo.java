@@ -12,6 +12,7 @@ public class DepartureInfo implements FlightInfo {
     private String expectedTime;
     private String actualTime;
     private String gate;
+    private String registrationDesk;
     private String city;
     private Statuses status;
 
@@ -39,20 +40,20 @@ public class DepartureInfo implements FlightInfo {
         this.expectedTime = expectedTime;
     }
 
-    public String getActualTime() {
-        return actualTime;
-    }
-
-    public void setActualTime(String actualTime) {
-        this.actualTime = actualTime;
-    }
-
     public String getGate() {
         return gate;
     }
 
     public void setGate(String gate) {
         this.gate = gate;
+    }
+
+    public String getRegistrationDesk() {
+        return registrationDesk;
+    }
+
+    public void setRegistrationDesk(String registrationDesk) {
+        this.registrationDesk = registrationDesk;
     }
 
     public String getCity() {
@@ -67,10 +68,20 @@ public class DepartureInfo implements FlightInfo {
         return status;
     }
 
+    public String getActualTime() {
+        return actualTime;
+    }
+
+    public void setActualTime(String actualTime) {
+        this.actualTime = actualTime;
+    }
+
     public void setStatus(String status) {
         if (status != null) {
-            if (status.contains("LANDED")) {
-                this.status = Statuses.LANDED;
+            if (status.contains("AIRBORNE")) {
+                this.status = Statuses.AIRBORNE;
+            } else if (status.contains("ARRIVED")) {
+                this.status = Statuses.ARRIVED;
             } else if (status.contains("DELAYED")) {
                 this.status = Statuses.DELAYED;
             } else if (status.contains("BOARDING")) {

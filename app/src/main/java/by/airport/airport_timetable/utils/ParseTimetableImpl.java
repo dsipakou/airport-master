@@ -18,25 +18,54 @@ import by.airport.airport_timetable.entity.FullFlightInfo;
  */
 public class ParseTimetableImpl<T extends FlightInfo> implements ParseTimetable<T> {
 
-    private static final String TIME_TABLE_XPATH = "//table/tbody/tr";
+    private static final String TIME_TABLE_XPATH = "//table/tbody/tr[@class='today']";
+    private static final String STATUS_XPATH = TIME_TABLE_XPATH + "/td[7]/span[1]";
     private static final String HEADER_DATE_FORMAT = "%s:%s";
     private FullFlightInfo<T> fullFlightInfo;
 
-    public FullFlightInfo<T> getDetailsList(URL url, Class<T> clazz) {
+    public FullFlightInfo<T> getArrivalDetailsList(URL url, Class<T> clazz) {
         List<T> infos = new ArrayList<>();
         fullFlightInfo = new FullFlightInfo<>();
         try {
             HtmlParser htmlParser = new HtmlParser(url, TIME_TABLE_XPATH);
+            HtmlParser status = new HtmlParser(url, STATUS_XPATH);
             for(Object row : htmlParser.getTimetable()) {
                 T info = clazz.newInstance();
                 TagNode cell = (TagNode) row;
-                info.setCompany(htmlParser.getCellInner(cell, 1));
-                info.setExpectedTime(htmlParser.getCellInner(cell, 3));
-                info.setActualTime(htmlParser.getCellInner(cell, 5));
-                info.setCode(htmlParser.getCellInner(cell, 7));
-                info.setCity(htmlParser.getCellInner(cell, 9));
-                info.setGate(htmlParser.getCellInner(cell, 11));
-                info.setStatus(htmlParser.getCellInner(cell, 13));
+                info.setCompany(htmlParser.getCellInner(cell, 0));
+                info.setExpectedTime(htmlParser.getCellInner(cell, 1));
+                info.setActualTime(htmlParser.getCellInner(cell, 2));
+                info.setCode(htmlParser.getCellInner(cell, 3));
+                info.setCity(htmlParser.getCellInner(cell, 4));
+                info.setGate(htmlParser.getCellInner(cell, 5));
+                info.setStatus(status.getCellInner(cell, 6));
+                infos.add(info);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        fullFlightInfo.setFlightInfo(infos);
+        setHeaders(infos);
+        return fullFlightInfo;
+    }
+
+    public FullFlightInfo<T> getDepartureDetailsList(URL url, Class<T> clazz) {
+        List<T> infos = new ArrayList<>();
+        fullFlightInfo = new FullFlightInfo<>();
+        try {
+            HtmlParser htmlParser = new HtmlParser(url, TIME_TABLE_XPATH);
+            HtmlParser status = new HtmlParser(url, STATUS_XPATH);
+            for(Object row : htmlParser.getTimetable()) {
+                T info = clazz.newInstance();
+                TagNode cell = (TagNode) row;
+                info.setCompany(htmlParser.getCellInner(cell, 0));
+                info.setExpectedTime(htmlParser.getCellInner(cell, 1));
+                info.setCode(htmlParser.getCellInner(cell, 2));
+                info.setCity(htmlParser.getCellInner(cell, 3));
+                info.setRegistrationDesk(htmlParser.getCellInner(cell, 4));
+                info.setGate(htmlParser.getCellInner(cell, 5));
+                info.setStatus(status.getCellInner(cell, 6));
                 infos.add(info);
             }
         } catch (Exception e) {

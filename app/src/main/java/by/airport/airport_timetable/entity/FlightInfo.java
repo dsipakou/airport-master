@@ -11,6 +11,7 @@ public interface FlightInfo {
     String getCity();
     String getExpectedTime();
     String getActualTime();
+    String getRegistrationDesk();
     Statuses getStatus();
     String getGate();
     void setCompany(String company);
@@ -19,5 +20,6 @@ public interface FlightInfo {
     void setExpectedTime(String expectedTime);
     void setActualTime(String actualTime);
     void setStatus(String status);
+    void setRegistrationDesk(String registrationDesk);
     void setGate(String gate);
 }

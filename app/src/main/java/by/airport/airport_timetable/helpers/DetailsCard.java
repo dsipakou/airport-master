@@ -40,4 +40,8 @@ public class DetailsCard extends AppCompatActivity {
     public String getGate() {
         return this.activity.getGate();
     }
+
+    public String getRegistrationDesk() {
+        return this.activity.getRegistrationDesk();
+    }
 }

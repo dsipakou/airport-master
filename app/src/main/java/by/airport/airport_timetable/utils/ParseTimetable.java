@@ -9,5 +9,6 @@ import by.airport.airport_timetable.entity.FullFlightInfo;
  */
 public interface ParseTimetable<T> {
 
-    FullFlightInfo getDetailsList(URL url, Class<T> clazz);
+    FullFlightInfo getArrivalDetailsList(URL url, Class<T> clazz);
+    FullFlightInfo getDepartureDetailsList(URL url, Class<T> clazz);
 }

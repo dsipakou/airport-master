@@ -57,10 +57,23 @@
                 android:layout_marginTop="10sp" />
 
             <TextView
-                android:id="@+id/gate_title"
+                android:id="@+id/registration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/company"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20sp"
+                android:text="@string/registration_label"
+                android:textColor="@color/main_background"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/gate_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/registration"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20sp"
                 android:text="@string/gate_label"

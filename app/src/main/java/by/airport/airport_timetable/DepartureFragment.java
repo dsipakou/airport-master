@@ -73,7 +73,7 @@ public class DepartureFragment extends Fragment {
             parsedTimetable = new ParseTimetableImpl<>();
             FullFlightInfo<DepartureInfo> output = new FullFlightInfo<>();
             try {
-                output = parsedTimetable.getDetailsList(new URL(arg[0]), DepartureInfo.class);
+                output = parsedTimetable.getDepartureDetailsList(new URL(arg[0]), DepartureInfo.class);
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -17,22 +17,23 @@ import by.airport.airport_timetable.utils.StringUtils;
 /*
 * + AEROFLOT
 * + AIR BALTIC
-* + AIR CHINA
+* + AIR CHINA INTERNATIONAL C
 * + Arkia Israeli Airlines
 * + AUSTRIAN AIRLINES
+* + AZAL
 * + Azerbaijan Airlines
 * + BELAVIA
 * + ETIHAD AIRWAYS
 * + IRAQI AIRWAYS
-* + LOT
-* + LUFTHANSA
+* + LOT POLISH AIRLINES
+* + LUFTHANSA GERMAN AIRLINES
 * + MOTOR SICH
 * + TURKMENISTAN AIRLINES
 * + TURKISH AIRLINES
-* + UTAIR AVIATION
-* + UKRAINE INTERNATIONAL AIRLINES
+* + UTAIR
+* + UKRAINE INT. AIRLINES
 * + Uzbekistan Airways
-* + VUELING
+* + VUELING AIRLINES
 * */
 
 
@@ -141,7 +142,7 @@ public class ArrivalActivity extends AppCompatActivity {
             GradientDrawable bgShape = (GradientDrawable) status.getBackground();
 
             switch (tmpStatus) {
-                case LANDED:
+                case ARRIVED:
                     bgShape.setColor(Color.parseColor("#0AC20A"));
                     status.setTextColor(Color.WHITE);
                     break;
@@ -156,6 +157,10 @@ public class ArrivalActivity extends AppCompatActivity {
                 case CHECKIN:
                     bgShape.setColor(Color.YELLOW);
                     status.setTextColor(Color.parseColor("#4E5200"));
+                    break;
+                case ENROUTE:
+                    bgShape.setColor(Color.BLUE);
+                    status.setTextColor(Color.WHITE);
                     break;
                 default:
                     status.setVisibility(View.GONE);

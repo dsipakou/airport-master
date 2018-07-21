@@ -62,7 +62,11 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
                         "string",
                         getContext().getPackageName());
                 if (resourceId > 0) {
-                    city.setText(view.getResources().getString(resourceId));
+                    try {
+                        city.setText(view.getResources().getString(resourceId));
+                    } catch (Exception e) {
+                        System.out.println(e.getStackTrace());
+                    }
                 } else {
                     city.setText(info.getCity());
                 }
@@ -104,7 +108,7 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
                 GradientDrawable bgShape = (GradientDrawable) status.getBackground();
 
                 switch (tmpStatus) {
-                    case LANDED:
+                    case ARRIVED:
                         bgShape.setColor(Color.parseColor("#0AC20A"));
                         status.setTextColor(Color.WHITE);
                         break;
@@ -119,6 +123,14 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
                     case CHECKIN:
                         bgShape.setColor(Color.YELLOW);
                         status.setTextColor(Color.parseColor("#4E5200"));
+                        break;
+                    case ENROUTE:
+                        bgShape.setColor(Color.BLUE);
+                        status.setTextColor(Color.WHITE);
+                        break;
+                    case AIRBORNE:
+                        bgShape.setColor(Color.parseColor("#0AC20A"));
+                        status.setTextColor(Color.WHITE);
                         break;
                     default:
                         status.setVisibility(View.GONE);

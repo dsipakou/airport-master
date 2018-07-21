@@ -6,7 +6,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,6 @@ import android.widget.ProgressBar;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.logging.Logger;
 
 import by.airport.airport_timetable.entity.ArrivalInfo;
 import by.airport.airport_timetable.entity.FullFlightInfo;
@@ -77,7 +75,7 @@ public class ArrivalFragment extends Fragment {
 
             FullFlightInfo<ArrivalInfo> output = new FullFlightInfo<>();
             try {
-                output = parsedTimetable.getDetailsList(new URL(arg[0]), ArrivalInfo.class);
+                output = parsedTimetable.getArrivalDetailsList(new URL(arg[0]), ArrivalInfo.class);
             } catch (Exception e) {
                 e.printStackTrace();
             }

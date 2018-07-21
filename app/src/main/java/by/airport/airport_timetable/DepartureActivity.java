@@ -41,6 +41,7 @@ public class DepartureActivity extends AppCompatActivity {
         TextView timeScheduled = (TextView) findViewById(R.id.scheduled);
         TextView timeActual = (TextView) findViewById(R.id.actual);
         TextView status = (TextView) findViewById(R.id.status);
+        TextView registration = (TextView) findViewById(R.id.registration);
         TextView gate = (TextView) findViewById(R.id.gate_title);
 
         DetailsCard detailsCard = new DetailsCard(Globals.departureInfo);
@@ -117,7 +118,7 @@ public class DepartureActivity extends AppCompatActivity {
             GradientDrawable bgShape = (GradientDrawable) status.getBackground();
 
             switch (tmpStatus) {
-                case LANDED:
+                case ARRIVED:
                     bgShape.setColor(Color.parseColor("#0AC20A"));
                     status.setTextColor(Color.WHITE);
                     break;
@@ -133,10 +134,19 @@ public class DepartureActivity extends AppCompatActivity {
                     bgShape.setColor(Color.YELLOW);
                     status.setTextColor(Color.parseColor("#4E5200"));
                     break;
+                case AIRBORNE:
+                    bgShape.setColor(Color.parseColor("#0AC20A"));
+                    status.setTextColor(Color.WHITE);
+                    break;
                 default:
                     status.setVisibility(View.GONE);
                     break;
             }
+        }
+
+        if (registration != null && detailsCard.getRegistrationDesk() != null) {
+            registration.setVisibility(View.VISIBLE);
+            registration.setText(registration.getText() + ": " + detailsCard.getRegistrationDesk());
         }
 
         if (gate != null && detailsCard.getGate() != null) {

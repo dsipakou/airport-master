@@ -1,8 +1,10 @@
 package by.airport.airport_timetable.helpers;
 
 public enum Statuses {
-    LANDED,
+    AIRBORNE,
+    ARRIVED,
     DELAYED,
     BOARDING,
-    CHECKIN;
+    CHECKIN,
+    ENROUTE;
 }
