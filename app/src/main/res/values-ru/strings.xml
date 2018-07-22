@@ -68,6 +68,7 @@
     <string name="DUBLIN">Дублин</string>
     <string name="EKATERINBURG">Екатеринбург</string>
     <string name="ENFIDHA">Энфида</string>
+    <string name="EREVAN">Ереван</string>
     <string name="FRANKFURT">Франкфурт</string>
     <string name="GENEVA">Женева</string>
     <string name="GOMEL">Гомель</string>
@@ -76,7 +77,7 @@
     <string name="HERAKLION">Ираклион</string>
     <string name="HURGHADA">Хургада</string>
     <string name="ISTANBUL">Стамбул</string>
-    <string name="IZMIRADNANMENDERES">Измир (Аднана Мендереса)</string>
+    <string name="IZMIRADNANMENDERES">Измир (А. Мендереса)</string>
     <string name="KALININGRAD">Калининград</string>
     <string name="KARAGANDA">Караганда</string>
     <string name="KAVALA">Кавала</string>
@@ -109,11 +110,13 @@
     <string name="NICE">Ницца</string>
     <string name="NIZHNEKAMSK">Нижнекамск</string>
     <string name="NIZHNIYNOVGOROD">Н. Новгород</string>
+    <string name="NOVYURENGOY">Новый Уренгой</string>
     <string name="ODESSA">Одесса</string>
     <string name="OSLO">Осло</string>
     <string name="PALANGA">Паланга</string>
     <string name="PALMAMALLORC">Пальма</string>
     <string name="PARISCHARLESDEGAULLE">Париж (Шарль-де-Голль)</string>
+    <string name="PARMA">Парма</string>
     <string name="PAVLODAR">Павлодар</string>
     <string name="PODGORICA">Подгорица</string>
     <string name="PRAGUE">Прага</string>

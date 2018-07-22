@@ -68,6 +68,7 @@
     <string name="DUBLIN">Dublin</string>
     <string name="EKATERINBURG">Ekaterinburg</string>
     <string name="ENFIDHA">Enfidha</string>
+    <string name="EREVAN">Erevan</string>
     <string name="FRANKFURT">Frankfurt</string>
     <string name="GENEVA">Geneva</string>
     <string name="GOMEL">Gomel</string>
@@ -109,11 +110,13 @@
     <string name="NICE">Nice</string>
     <string name="NIZHNEKAMSK">Nizhnekamsk</string>
     <string name="NIZHNIYNOVGOROD">N. Novgorod</string>
+    <string name="NOVYURENGOY">Novy Urengoy</string>
     <string name="ODESSA">Odessa</string>
     <string name="OSLO">Oslo</string>
     <string name="PALANGA">Palanga</string>
     <string name="PALMAMALLORC">Palma</string>
     <string name="PARISCHARLESDEGAULLE">Paris (Charles de Gaulle)</string>
+    <string name="PARMA">Parma</string>
     <string name="PAVLODAR">Pavlodar</string>
     <string name="PODGORICA">Podgorica</string>
     <string name="PRAGUE">Prague</string>
