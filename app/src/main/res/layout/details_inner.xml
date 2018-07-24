@@ -95,7 +95,7 @@
                 android:paddingRight="20sp"
                 android:paddingStart="20sp"
                 android:textAlignment="center"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:visibility="gone" />
 
             <RelativeLayout

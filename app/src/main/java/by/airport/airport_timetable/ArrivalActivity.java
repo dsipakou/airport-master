@@ -146,6 +146,10 @@ public class ArrivalActivity extends AppCompatActivity {
                     bgShape.setColor(Color.parseColor("#0AC20A"));
                     status.setTextColor(Color.WHITE);
                     break;
+                case CANCELED:
+                    bgShape.setColor(Color.RED);
+                    status.setTextColor(Color.WHITE);
+                    break;
                 case DELAYED:
                     bgShape.setColor(Color.RED);
                     status.setTextColor(Color.WHITE);
@@ -160,6 +164,10 @@ public class ArrivalActivity extends AppCompatActivity {
                     break;
                 case ENROUTE:
                     bgShape.setColor(Color.BLUE);
+                    status.setTextColor(Color.WHITE);
+                    break;
+                case LANDED:
+                    bgShape.setColor(Color.parseColor("#0AC20A"));
                     status.setTextColor(Color.WHITE);
                     break;
                 default:

@@ -25,8 +25,12 @@
 
     <string name="AIRBORNE">Вылетел</string>
     <string name="ARRIVED">Прибыл</string>
+    <string name="CANCELED">Отменён</string>
     <string name="CHECKIN">Регистрация</string>
     <string name="BOARDING">Посадка</string>
+    <string name="LANDED">Совершил посадку</string>
+    <string name="LEAVING">Отправляется</string>
+    <string name="BOARDING_FINISHED">Посадка закончена</string>
     <string name="DELAYED">Задержан</string>
     <string name="ENROUTE">В пути</string>
 
@@ -38,7 +42,7 @@
     <string name="ANCONA">Анкона</string>
     <string name="ANTALYA">Анталья</string>
     <string name="ARAXOS">Араксос</string>
-    <string name="ASHGABAT">Ашгабат</string>
+    <string name="ASHGABAD">Ашгабат</string>
     <string name="ASTANA">Астана</string>
     <string name="ATHENS">Афины</string>
     <string name="BAGHDAD">Багдад</string>
@@ -58,7 +62,7 @@
     <string name="BODRUM">Бодрум</string>
     <string name="BOURGAS">Бургас</string>
     <string name="BRATISLAVA">Братислава</string>
-    <string name="BRUSSELS">Брюссель</string>
+    <string name="BRUSSELSCHARLEROI">Брюссель (Шарлеруа)</string>
     <string name="BUDAPEST">Будапешт</string>
     <string name="CALAMOCHA">Каламоча</string>
     <string name="CATANIA">Катанья</string>
@@ -73,13 +77,14 @@
     <string name="GENEVA">Женева</string>
     <string name="GOMEL">Гомель</string>
     <string name="HANOVER">Ганновер</string>
-    <string name="HELSINKI">Хельсинки</string>
+    <string name="HELSINKIVANTAA">Хельсинки (Вантаа)</string>
     <string name="HERAKLION">Ираклион</string>
     <string name="HURGHADA">Хургада</string>
     <string name="ISTANBUL">Стамбул</string>
     <string name="IZMIRADNANMENDERES">Измир (А. Мендереса)</string>
     <string name="KALININGRAD">Калининград</string>
     <string name="KARAGANDA">Караганда</string>
+    <string name="KAUNAS">Каунас</string>
     <string name="KAVALA">Кавала</string>
     <string name="KAZAN">Казань</string>
     <string name="KERKYRA">Керкира</string>
@@ -100,7 +105,7 @@
     <string name="LUXEMBOURG">Люксембург</string>
     <string name="LVIV">Львов</string>
     <string name="MANCHESTER">Манчестер</string>
-    <string name="MILAN">Милан</string>
+    <string name="MILANMALPENSA">Милан (Мальпенса)</string>
     <string name="MONTICHIARI">Монтикьяри</string>
     <string name="MOSCOWDOMODEDOVO">Москва (Домодедово)</string>
     <string name="MOSCOWVNUKOVO">Москва (Внуково)</string>
@@ -114,7 +119,7 @@
     <string name="ODESSA">Одесса</string>
     <string name="OSLO">Осло</string>
     <string name="PALANGA">Паланга</string>
-    <string name="PALMAMALLORC">Пальма</string>
+    <string name="PALMADEMALLORCA">Пальма</string>
     <string name="PARISCHARLESDEGAULLE">Париж (Шарль-де-Голль)</string>
     <string name="PARMA">Парма</string>
     <string name="PAVLODAR">Павлодар</string>
@@ -122,7 +127,7 @@
     <string name="PRAGUE">Прага</string>
     <string name="RIGA">Рига</string>
     <string name="RIMINI">Римини</string>
-    <string name="RODOS">Родос</string>
+    <string name="RHODES">Родос</string>
     <string name="ROMEFIUMICINO">Рим (Фьюмичино)</string>
     <string name="ROSTOVONDONPLATOV">Ростов-на-Дону (Платов)</string>
     <string name="SALZBURG">Зальцбург</string>
@@ -131,7 +136,7 @@
     <string name="SHARMESHEIK">Шарм-эш-Шейх</string>
     <string name="SKOPJE">Скопье</string>
     <string name="STPETERSBURGPULKOVO">С.-Петербург (Пулково)</string>
-    <string name="STOCKHOLM">Стокгольм</string>
+    <string name="STOCKHOLMARLANDA">Стокгольм (Арланда)</string>
     <string name="SURGUT">Сургут</string>
     <string name="TASHKENT">Ташкент</string>
     <string name="TBILISI">Тбилиси</string>

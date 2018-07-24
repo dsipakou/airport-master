@@ -78,8 +78,12 @@ public class ArrivalInfo implements FlightInfo {
 
     public void setStatus(String status) {
         if (status != null) {
-            if (status.contains("ARRIVED")) {
+            if (status.contains("AIRBORNE")) {
+                this.status = Statuses.AIRBORNE;
+            } else if (status.contains("ARRIVED")) {
                 this.status = Statuses.ARRIVED;
+            } else if (status.contains("CANCELED")) {
+                this.status = Statuses.CANCELED;
             } else if (status.contains("DELAYED")) {
                 this.status = Statuses.DELAYED;
             } else if (status.contains("BOARDING")) {
@@ -88,6 +92,8 @@ public class ArrivalInfo implements FlightInfo {
                 this.status = Statuses.CHECKIN;
             } else if (status.contains("EN ROUTE")) {
                 this.status = Statuses.ENROUTE;
+            } else if (status.contains("LANDED")) {
+                this.status = Statuses.LANDED;
             }
         }
     }

@@ -112,11 +112,27 @@ public class AirportListAdapter<T extends FlightInfo> extends ArrayAdapter<T> {
                         bgShape.setColor(Color.parseColor("#0AC20A"));
                         status.setTextColor(Color.WHITE);
                         break;
+                    case CANCELED:
+                        bgShape.setColor(Color.RED);
+                        status.setTextColor(Color.WHITE);
+                        break;
                     case DELAYED:
                         bgShape.setColor(Color.RED);
                         status.setTextColor(Color.WHITE);
                         break;
                     case BOARDING:
+                        bgShape.setColor(Color.BLUE);
+                        status.setTextColor(Color.WHITE);
+                        break;
+                    case BOARDING_FINISHED:
+                        bgShape.setColor(Color.BLUE);
+                        status.setTextColor(Color.WHITE);
+                        break;
+                    case LANDED:
+                        bgShape.setColor(Color.parseColor("#0AC20A"));
+                        status.setTextColor(Color.WHITE);
+                        break;
+                    case LEAVING:
                         bgShape.setColor(Color.parseColor("#0AC20A"));
                         status.setTextColor(Color.WHITE);
                         break;

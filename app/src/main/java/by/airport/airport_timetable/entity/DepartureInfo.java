@@ -82,8 +82,14 @@ public class DepartureInfo implements FlightInfo {
                 this.status = Statuses.AIRBORNE;
             } else if (status.contains("ARRIVED")) {
                 this.status = Statuses.ARRIVED;
+            } else if (status.contains("CANCELED")) {
+                this.status = Statuses.CANCELED;
             } else if (status.contains("DELAYED")) {
                 this.status = Statuses.DELAYED;
+            } else if (status.contains("BOARDING FINISHED")) {
+                this.status = Statuses.BOARDING_FINISHED;
+            } else if (status.contains("LEAVING")) {
+                this.status = Statuses.LEAVING;
             } else if (status.contains("BOARDING")) {
                 this.status = Statuses.BOARDING;
             } else if (status.contains("CHECK-IN")) {
