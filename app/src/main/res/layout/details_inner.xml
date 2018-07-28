@@ -22,7 +22,8 @@
         <TextView
             android:id="@+id/code"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_main"/>
 
     </LinearLayout>
 
@@ -30,23 +31,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="55dp"
-        app:cardUseCompatPadding="true">
+        app:cardUseCompatPadding="true"
+        android:background="@color/cardview_light_background">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:paddingLeft="15dp"
-            android:paddingRight="15dp">
+            android:paddingRight="15dp"
+            android:background="@color/cardview_light_background">
 
             <TextView
                 android:id="@+id/company"
                 android:layout_width="wrap_content"
                 android:layout_height="50sp"
                 android:layout_centerHorizontal="true"
+                android:textColor="@color/font_secondary"
                 android:layout_marginTop="10sp"
                 android:textAlignment="center"
-                android:textColor="@color/main_background"
                 android:textSize="24sp" />
 
             <ImageView
@@ -64,7 +67,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20sp"
                 android:text="@string/registration_label"
-                android:textColor="@color/main_background"
+                android:textColor="@color/font_secondary"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -112,6 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:text="@string/scheduled_label"
+                    android:textColor="@color/font_main"
                     android:textSize="20sp" />
 
                 <TextView
@@ -121,7 +125,7 @@
                     android:layout_below="@id/scheduled_title"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10sp"
-                    android:textColor="@color/main_background"
+                    android:textColor="@color/font_secondary"
                     android:textStyle="bold"
                     android:textSize="30sp" />
 
@@ -142,6 +146,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:text="@string/estimated_label"
+                    android:textColor="@color/font_main"
                     android:textSize="20sp" />
 
                 <TextView
@@ -151,7 +156,7 @@
                     android:layout_below="@id/actual_title"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10sp"
-                    android:textColor="@color/main_background"
+                    android:textColor="@color/font_secondary"
                     android:textStyle="bold"
                     android:textSize="30sp" />
             </RelativeLayout>

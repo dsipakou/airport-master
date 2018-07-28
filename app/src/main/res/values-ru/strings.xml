@@ -5,6 +5,10 @@
     <string name="settings_preferences">Настройки</string>
 
     <string name="locale_lang">language</string>
+    <string name="now">Сейчас</string>
+    <string name="today">Сегодня</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="yesterday">Вчера</string>
 
     <string name="app_name">Аэропорт Минск</string>
     <string name="ok">ОК</string>
@@ -59,7 +63,7 @@
     <string name="BELGRADE">Белград</string>
     <string name="BERGAMO">Бергамо</string>
     <string name="BERLINSCHOENEFELD">Берлин (Шёнефельд)</string>
-    <string name="BODRUM">Бодрум</string>
+    <string name="BODRUMMILAS">Бодрум (Миляс)</string>
     <string name="BOURGAS">Бургас</string>
     <string name="BRATISLAVA">Братислава</string>
     <string name="BRUSSELSCHARLEROI">Брюссель (Шарлеруа)</string>
@@ -69,6 +73,7 @@
     <string name="CHEREPOVETS">Череповец</string>
     <string name="COLOGNE">Кёльн</string>
     <string name="CONSTANTA">Констанца</string>
+    <string name="DALAMAN">Даламан</string>
     <string name="DUBLIN">Дублин</string>
     <string name="EKATERINBURG">Екатеринбург</string>
     <string name="ENFIDHA">Энфида</string>
@@ -87,7 +92,7 @@
     <string name="KAUNAS">Каунас</string>
     <string name="KAVALA">Кавала</string>
     <string name="KAZAN">Казань</string>
-    <string name="KERKYRA">Керкира</string>
+    <string name="KERKIRA">Керкира</string>
     <string name="KIEVBORISPOL">Киев (Борисполь)</string>
     <string name="KYIVBORISP">Киев (Бор-ль)</string>
     <string name="KIEVZHULYANY">Киев (Жуляны)</string>
@@ -96,9 +101,9 @@
     <string name="KHARKIV">Харьков</string>
     <string name="KHMANSIYSK">Х-Мансийск</string>
     <string name="KLAGENFURT">Клагенфурт</string>
-    <string name="KOSTANAY">Костанай</string>
     <string name="KRASNODAR">Краснодар</string>
     <string name="KRIVOYROG">Кривой Рог</string>
+    <string name="KUSTANAY">Костанай</string>
     <string name="KUTAISI">Кутаиси</string>
     <string name="LARNACA">Ларнака</string>
     <string name="LONDONGATWICK">Лондон (Гатвик)</string>
@@ -116,6 +121,7 @@
     <string name="NIZHNEKAMSK">Нижнекамск</string>
     <string name="NIZHNIYNOVGOROD">Н. Новгород</string>
     <string name="NOVYURENGOY">Новый Уренгой</string>
+    <string name="NOVOSIBIRSK">Новосибирск</string>
     <string name="ODESSA">Одесса</string>
     <string name="OSLO">Осло</string>
     <string name="PALANGA">Паланга</string>

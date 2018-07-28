@@ -2,8 +2,10 @@ package by.airport.airport_timetable;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 import by.airport.airport_timetable.entity.DepartureInfo;
 import by.airport.airport_timetable.entity.FullFlightInfo;
 import by.airport.airport_timetable.helpers.AirportListAdapter;
+import by.airport.airport_timetable.helpers.Period;
 import by.airport.airport_timetable.utils.Globals;
 import by.airport.airport_timetable.utils.ParseTimetableImpl;
 import dev.dworks.libs.astickyheader.SimpleSectionedListAdapter;
@@ -63,7 +66,12 @@ public class DepartureFragment extends Fragment {
 
     private void updateData() {
         progressBar.setVisibility(View.VISIBLE);
-        new ParseDeparture().execute(Globals.DEPARTURE_URL);
+        String url = Globals.DEPARTURE_URL;
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(MainActivity.contextOfApp);
+        if (Period.fromString(settings.getString("dayMode", Period.NOW.toString())) == Period.NOW) {
+            url = Globals.SHORT_DEPARTURE_URL;
+        }
+        new ParseDeparture().execute(url);
     }
 
     private class ParseDeparture extends AsyncTask<String, Void, FullFlightInfo<DepartureInfo>> {

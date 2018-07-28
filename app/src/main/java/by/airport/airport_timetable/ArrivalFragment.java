@@ -1,9 +1,12 @@
 package by.airport.airport_timetable;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
@@ -19,6 +22,7 @@ import java.util.ArrayList;
 import by.airport.airport_timetable.entity.ArrivalInfo;
 import by.airport.airport_timetable.entity.FullFlightInfo;
 import by.airport.airport_timetable.helpers.AirportListAdapter;
+import by.airport.airport_timetable.helpers.Period;
 import by.airport.airport_timetable.utils.Globals;
 import by.airport.airport_timetable.utils.ParseTimetableImpl;
 import dev.dworks.libs.astickyheader.SimpleSectionedListAdapter;
@@ -54,7 +58,7 @@ public class ArrivalFragment extends Fragment {
         updateData();
         mSwipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
-            public void onRefresh(){
+            public void onRefresh() {
                 updateData();
                 mSwipeRefresh.setRefreshing(false);
             }
@@ -64,7 +68,12 @@ public class ArrivalFragment extends Fragment {
 
     private void updateData() {
         progressBar.setVisibility(View.VISIBLE);
-        new ParseArrival().execute(Globals.ARRIVAL_URL);
+        String url = Globals.ARRIVAL_URL;
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(MainActivity.contextOfApp);
+        if (Period.fromString(settings.getString("dayMode", Period.NOW.toString())) == Period.NOW) {
+            url = Globals.SHORT_ARRIVAL_URL;
+        }
+        new ParseArrival().execute(url);
     }
 
     private class ParseArrival extends AsyncTask<String, Void, FullFlightInfo<ArrivalInfo>> {
@@ -86,7 +95,7 @@ public class ArrivalFragment extends Fragment {
             progressBar.setVisibility(View.GONE);
             sections.clear();
             mAdapter = new AirportListAdapter(mParentActivity, R.layout.airport_list_adapter, output.getFlightInfo());
-            for (int i = 0; i < output.getPositions().size(); i ++) {
+            for (int i = 0; i < output.getPositions().size(); i++) {
                 sections.add(new SimpleSectionedListAdapter.Section(output.getPositions().get(i), output.getHeaders().get(i)));
             }
             SimpleSectionedListAdapter simpleSectionedListAdapter;
@@ -104,8 +113,7 @@ public class ArrivalFragment extends Fragment {
                 Globals.arrivalInfo = (ArrivalInfo) parent.getAdapter().getItem(position);
                 Intent intent = new Intent(view.getContext(), ArrivalActivity.class);
                 startActivity(intent);
-            }
-            catch (ClassCastException ex) {
+            } catch (ClassCastException ex) {
 
             }
 

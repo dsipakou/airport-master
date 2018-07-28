@@ -1,5 +1,9 @@
 package by.airport.airport_timetable.utils;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
 import org.htmlcleaner.TagNode;
 
 import java.net.URL;
@@ -10,25 +14,35 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import by.airport.airport_timetable.MainActivity;
 import by.airport.airport_timetable.entity.FlightInfo;
 import by.airport.airport_timetable.entity.FullFlightInfo;
+import by.airport.airport_timetable.helpers.Period;
 
 /**
  * Created by dzianis.sipakou on 5/21/2015.
  */
 public class ParseTimetableImpl<T extends FlightInfo> implements ParseTimetable<T> {
 
-    private static final String TIME_TABLE_XPATH = "//table/tbody/tr[@class='today']";
-    private static final String STATUS_XPATH = TIME_TABLE_XPATH + "/td[7]/span[1]";
+    private static final String TIME_TABLE_TEMPLATE_XPATH = "//table/tbody/tr[@class='%s']";
+    private static final String SHORT_TIME_TABLE_TEMPLATE_XPATH = "//div[@class='content']/table/tbody/tr[position() > 1]";
+    private static final String STATUS_XPATH = "/td[7]/span[1]";
     private static final String HEADER_DATE_FORMAT = "%s:%s";
     private FullFlightInfo<T> fullFlightInfo;
 
     public FullFlightInfo<T> getArrivalDetailsList(URL url, Class<T> clazz) {
+        Context mainContext = MainActivity.getContextOfApp();
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mainContext);
+        Period dayMode = Period.fromString(settings.getString("dayMode", Period.NOW.toString()));
+        String timeTableXpath = String.format(TIME_TABLE_TEMPLATE_XPATH, dayMode.toString());
+        if (dayMode == Period.NOW) {
+            timeTableXpath = SHORT_TIME_TABLE_TEMPLATE_XPATH;
+        }
         List<T> infos = new ArrayList<>();
         fullFlightInfo = new FullFlightInfo<>();
         try {
-            HtmlParser htmlParser = new HtmlParser(url, TIME_TABLE_XPATH);
-            HtmlParser status = new HtmlParser(url, STATUS_XPATH);
+            HtmlParser htmlParser = new HtmlParser(url, timeTableXpath);
+            HtmlParser status = new HtmlParser(url, timeTableXpath + STATUS_XPATH);
             for(Object row : htmlParser.getTimetable()) {
                 T info = clazz.newInstance();
                 TagNode cell = (TagNode) row;
@@ -51,11 +65,18 @@ public class ParseTimetableImpl<T extends FlightInfo> implements ParseTimetable<
     }
 
     public FullFlightInfo<T> getDepartureDetailsList(URL url, Class<T> clazz) {
+        Context mainContext = MainActivity.getContextOfApp();
         List<T> infos = new ArrayList<>();
         fullFlightInfo = new FullFlightInfo<>();
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mainContext);
+        Period dayMode = Period.fromString(settings.getString("dayMode", Period.NOW.toString()));
+        String timeTableXpath = String.format(TIME_TABLE_TEMPLATE_XPATH, dayMode.toString());
+        if (dayMode == Period.NOW) {
+            timeTableXpath = SHORT_TIME_TABLE_TEMPLATE_XPATH;
+        }
         try {
-            HtmlParser htmlParser = new HtmlParser(url, TIME_TABLE_XPATH);
-            HtmlParser status = new HtmlParser(url, STATUS_XPATH);
+            HtmlParser htmlParser = new HtmlParser(url, timeTableXpath);
+            HtmlParser status = new HtmlParser(url, timeTableXpath + STATUS_XPATH);
             for(Object row : htmlParser.getTimetable()) {
                 T info = clazz.newInstance();
                 TagNode cell = (TagNode) row;
