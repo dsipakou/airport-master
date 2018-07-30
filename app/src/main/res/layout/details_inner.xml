@@ -127,7 +127,7 @@
                     android:layout_marginTop="10sp"
                     android:textColor="@color/font_secondary"
                     android:textStyle="bold"
-                    android:textSize="30sp" />
+                    android:textSize="20sp" />
 
             </RelativeLayout>
 
@@ -158,7 +158,7 @@
                     android:layout_marginTop="10sp"
                     android:textColor="@color/font_secondary"
                     android:textStyle="bold"
-                    android:textSize="30sp" />
+                    android:textSize="20sp" />
             </RelativeLayout>
 
 
