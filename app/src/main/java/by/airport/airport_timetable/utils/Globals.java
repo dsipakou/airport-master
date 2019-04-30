@@ -11,6 +11,6 @@ public class Globals {
     public static DepartureInfo departureInfo = new DepartureInfo();
     public static final String SHORT_ARRIVAL_URL = "http://airport.by/en";
     public static final String SHORT_DEPARTURE_URL = "http://airport.by/en/Departure";
-    public static final String ARRIVAL_URL = "http://airport.by/en/timetable/online-arrival";
-    public static final String DEPARTURE_URL = "http://airport.by/en/timetable/online-departure";
+    public static final String ARRIVAL_URL = "https://airport.by/en/timetable/online-arrival";
+    public static final String DEPARTURE_URL = "https://airport.by/en/timetable/online-departure";
 }
